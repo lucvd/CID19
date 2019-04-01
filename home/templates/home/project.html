@@ -1,0 +1,155 @@
+{% extends 'home/base.html' %}
+{% load rules %}
+{% load static %}
+
+{% block content %}
+
+    {# Header #}
+    <div class="jumbotron">
+        {% has_perm 'projects.edit_project' user project as can_edit %}
+        {% has_perm 'projects.is_owner' user project as is_owner %}
+
+        {# Title #}
+        <h1 class="display-4">
+            <div class="wordbreak">{{ project }}</div>
+        </h1>
+        {# Project Owner #}
+        <div>
+            {% if project.anonymity %}
+                <p>Anonymous project owner.</p>
+                <a href="{% url 'chat:newMessage' projectID=project.id %}">Click here to get in contact.</a>
+            {% else %}
+                By <a href="{% url 'home:profile' userID=project.owner.id slugName=project.owner.get_full_name|slugify %}">{{ project.owner.get_full_name }}</a>
+            {% endif %} {# anonimity #}
+        </div>
+        {# Favorite button #}
+        <span><a id="{{ project.id }}" class="home-favorite-button projectButton
+            {% if favorite %}
+                btn btn-primary">Remove as favorite
+        {% else %}
+            btn btn-secondary">Mark as favorite
+        {% endif %}</a></span>
+        {# Edit Button #}
+        {% if can_edit %}
+            <span><a class="btn btn-info projectButton" href="{% url 'home:editproject' projectID=project.id %}">Edit project</a></span>
+        {% endif %}
+        {# Remove Button #}
+        {% if is_owner %}
+            <button type="button" class="btn btn-danger projectButton" data-toggle="modal" data-target="#removeProjectModal">
+                Remove project
+            </button>
+        {% endif %}
+
+        <p></p>
+        <p></p>
+        <p class="lead wordbreak">{{ project.abstract }}</p>
+    </div>
+
+    {# Description and looking for #}
+    <div class="mx-4">
+        {% if project.description %}
+            <div class="row">
+                <div class="col">
+                    <p class="wordbreak">{{ project.description }}</p>
+                </div>
+            </div>
+        {% endif %}
+        {% if project.lookingFor %}
+            <div class="row">
+                <div class="col">
+                    <h3>This project is looking for:</h3>
+                    <p class="wordbreak">{{ project.lookingFor }}</p>
+                </div>
+            </div>
+        {% endif %}
+        <div class="row">
+            <div class="col">
+                <h3>Keywords:</h3>
+                <p class =  "wordbreak">{{ project.keywords }}</p>  <!--TODO see if this is correct 27/10/2018 -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h3>Project Status:</h3>
+                <p class =  "wordbreak">{{ project.projectStatus }}</p>  <!--TODO see if this is correct 27/10/2018 -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h3>Location:</h3>
+                <p class =  "wordbreak">{{ project.location }}</p>  <!--TODO see if this is correct 27/10/2018 -->
+            </div>
+        </div>
+        {% if project.projectType != None %}
+        <div class="row">
+            <div class="col">
+                <h3>Project Type:</h3>
+                <p class =  "wordbreak">{{ project.generalProjectType }}</p>  <!--TODO see if this is correct 27/10/2018 -->
+            </div>
+        </div>
+        {% endif %}
+        {% if project.wiift != None and project.wiift not in ''%}
+            <div class="row">
+                <div class="col">
+                    <h3>What do you have to gain:</h3>
+                    <p class =  "wordbreak">{{ project.wiift }}</p>  <!--TODO see if this is correct 27/10/2018 -->
+                </div>
+            </div>
+        {% endif %}
+        {% if project.projectWebsite != None and project.projectWebsite not in ''%}
+        <div class="row">
+            <div class="col">
+                <h3>Website with more information on this project:</h3>
+                <a class =  "wordbreak" href={{ project.projectWebsite }}>{{ project.projectWebsite }}</a>  <!--TODO see if this is correct 27/10/2018 -->
+            </div>
+        </div>
+        {% endif %}
+    </div>
+
+    {# the remove project-modal #}
+    {% if is_owner %}
+        <div class="modal fade" id="removeProjectModal" tabindex="-1" role="dialog"
+             aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title wordbreak" id="exampleModalLongTitle">Remove {{ project.title }}</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Be aware, there is no way to undo this! You could also unpublish your project so nothing is lost. Type the name of your project to completely remove your
+                        project: <br>
+                        <input type="text" name="Project name" id="probablyProjectName">
+                    </div>
+                    <div class="modal-body">
+                        We appreciate any feedback on why you want to remove your project from our site: <br>
+                        <input type="text" name="Feedback" id="feedback-remove-project">
+                        <input type="hidden" id="project-title" value="{{ project.title }}" readonly>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button id="remove-project-button" type="button" class="btn btn-danger" disabled="disabled">Remove project</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+
+{% endblock content %}
+
+{% block javascript %}
+    <script src="{% static 'home/js/customScripts.js' %}"></script>
+{% endblock javascript %}
+
+{% block stylesheets %}
+    <!-- TODO move this code to a seperate css file!!! -->
+    <style>
+        #remove-project-button {
+            background: darkgray;
+            border-color: darkgray;
+        }
+    </style>
+{% endblock %}
+

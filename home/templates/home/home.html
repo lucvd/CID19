@@ -1,0 +1,79 @@
+{% extends 'home/base.html' %}
+{% load rules %}
+{% load static %}
+
+{% block header %}
+{% endblock header%}
+
+
+
+{% block sidebar %}
+
+    {# create new project card #}
+    <div class="row">
+        <div class="col-sm-12 mt-4 mt-xl-0">
+            <div class="card cardShadow">
+                <div class="card-block text-center">
+                    <h5 class="card-title mt-2"><a
+                            href="{% url 'home:newproject' %}"><i class="fas fa-plus"></i> Create new project</a>
+                    </h5>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {# filter favorites #}
+    <button class="container my-3 btn btn-outline-primary" id="favorite-button">Favorites</button>
+
+    {# search for projects, primitive version #}
+<!--    <form method="GET" action="" id="searchform">
+        <input name="q" type="text" placeholder="Search..." value="{{ request.GET.q }}"/>
+        <input type='submit' value='Search'>
+    </form>
+-->
+    <input id="search_projects" name="search_projects" type="text" placeholder="Search..." onkeyup="search()">
+
+
+{% endblock sidebar %}
+
+
+
+{% block contentbody %}
+    <div class="row">
+
+        {% if projects %}
+            {% for project in projects %}
+                {% has_perm 'projects.can_view' user project as can_view_project %}
+                {% if can_view_project %}
+                    <div class="homepage-card-container col-sm-12 col-md-6 col-xl-4 mb-4">
+                        <div class="card cardShadow projectCard">
+                            {% if project.owner == user %}
+                                <div class="card-header text-center">Your project</div>{% endif %}
+                            <div class="card-block text-center">
+                                <h5 class="card-title mt-2"><a class="search-project"
+                                        href="{% url 'home:project' projectID=project.id slugTitle=project.title|slugify %}">{{ project.title|truncatechars_html:66 }}</a>
+                                </h5>
+                                <p></p>
+                                <p class="card-text">{{ project.abstract|truncatechars_html:100  }}</p>
+                                <p></p>
+                                <a id="{{ project.id }}"
+                                   class="home-favorite-button mb-2 {% if project.id in favorites %}isfavorite btn btn-primary">
+                                       Remove as favorite{% else %}btn btn-secondary">Mark as favorite{% endif %}</a>
+                            </div>
+                            {% if not project.visible %}<div class="card-footer text-muted text-center">Invisible to other users</div>{% endif %}
+                        </div>
+
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    </div>
+
+{% endblock contentbody %}
+
+
+{% block javascript %}
+    <script src="{% static 'home/js/customScripts.js' %}"></script>
+    <script src="{% static 'home/js/search_projects.js' %}"></script>
+{% endblock javascript %}

@@ -1,0 +1,17 @@
+{% extends 'home/base.html' %}
+
+{% block content %}
+
+    {# TODO needs styling ;) #}
+
+    <div class="jumbotron">
+        <p>Are you sure you want to log out?</p>
+
+        <form action="{% url 'home:logout' %}" method="post">
+            {% csrf_token %}
+            <input type="submit" value="Logout">
+        </form>
+    </div>
+
+{% endblock content %}
+

@@ -1,0 +1,94 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{# BASED ON https://simpleisbetterthancomplex.com/tutorial/2017/03/02/how-to-crop-images-in-a-django-application.html #}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cropper/4.0.0/cropper.min.css">
+{% endblock %}
+
+{% block content %}
+    <div class="jumbotron">
+        <h1>Edit profile picture</h1>
+        <form action="{% url 'home:editprofilepicture' %}" method="post" enctype="multipart/form-data" id="formprofilepicture">
+            {% csrf_token %}
+            {%  for hidden in form.hidden_fields %}
+                {{ hidden }}
+            {% endfor %}
+
+            {% if error %}
+                <div class="alert alert-danger">Error uploading picture, make sure you upload a correct image file!</div>
+            {% endif %}
+
+
+            <div class="row">
+                <div class="col-md-5">
+                    <h2>Default</h2>
+                    <img id="linkedinpicture" src="{% static 'home/img/default_profile_picture.jpg' %}" width="100%">
+                </div>
+                <div class="col-md-2">
+                    <h2>or</h2>
+                </div>
+                <div class="col-md-5">
+                    <h2>Upload your own picture</h2>
+                    <input type="file" name="profilePicture" id="id_profilePicture" />
+                </div>
+            </div>
+
+            {% comment %}
+            {% if linkedinNotOk %}
+                <div class="row">
+                    <div class="col">
+                        <h2>Upload your profile picture</h2>
+                        <input type="file" name="profilePicture" id="id_profilePicture" />
+                    </div>
+                </div>
+            {% else %}
+                <div class="row">
+                    <div class="col-md-5">
+                        <h2>Linkedin picture</h2>
+                        <img id="linkedinpicture" src="LINK TO LINKEDIN PROFILE PICTURE" width="100%">
+                    </div>
+                    <div class="col-md-2">
+                        <h2>or</h2>
+                    </div>
+                    <div class="col-md-5">
+                        <h2>Upload your own picture</h2>
+                        <input type="file" name="profilePicture" id="id_profilePicture" />
+                    </div>
+                </div>
+            {% endif %}
+            {% endcomment %}
+        </form>
+    </div>
+
+    <div class="modal fade" id="modalCrop">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Crop the photo</h4>
+                </div>
+                <div class="modal-body px-0">
+                    <img src="" id="image" style="max-width: 100%;">
+                </div>
+                <div class="modal-footer">
+                    <div class="btn-group pull-left" role="group">
+                        <button type="button" class="btn btn-default js-zoom-in">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                        <button type="button" class="btn btn-default js-zoom-out">
+                            <i class="fas fa-search-minus"></i>
+                        </button>
+                    </div>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary js-crop-and-upload">Crop and upload</button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascript %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropper/4.0.0/cropper.min.js"></script>
+    <script src="{% static 'home/js/profile_picture_crop.js' %}"></script>
+{% endblock javascript %}

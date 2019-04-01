@@ -1,0 +1,78 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+{% load filters %}
+
+{% block stylesheets %}
+    <link href="{% static 'home/css/profilepicture_hover_to_edit.css' %}" rel="stylesheet">
+{% endblock stylesheets %}
+
+{% block content %}
+    {% if profile.profilePicture %}
+        <div class="hovereffect">
+            <img class="img-responsive" src="{{ profile.profilePicture.url }}" alt="">
+            <a href="{%  url 'home:editprofilepicture' %}">
+                <div class="overlay">
+                    <h2>Change profile picture</h2>
+                </div>
+            </a>
+        </div>
+    {% endif %}
+    <div class="container jumbotron">
+    {% if not profile.profilePicture %}
+        <a class="btn btn-outline" href="{%  url 'home:editprofilepicture' %}">Add a profile picture</a>
+    {% endif %}
+        <form action="{% url 'home:editprofile' %}" method="post">
+            {% csrf_token %}
+
+            {% for hidden_field in form.hidden_fields %}
+                {{ hidden_field }}
+            {% endfor %}
+
+            {% if form.non_field_errors %}
+                <div class="alert alert-danger" role="alert">
+                    {% for error in form.non_field_errors %}
+                        {{ error }}
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            {% for field in form.visible_fields %}
+                <div class="form-group {% if field.field.required %}required{% endif %}">
+                    {% if field|is_checkbox %} {# display checkboxes differently #}
+                        <div class="checkbox">
+                            <label class='my-0' for="{{ field.auto_id }}"> {{ field }} {{ field.label }}</label>
+                            <small class="form-text text-muted">{{ field.help_text }}</small>
+                        </div>
+                    {% elif field|is_multiple_choice_field %} {# handle this part different #}
+                        <label class="my-0" for="{{ field.auto_id }}">{{ field.label}}</label>
+                        <small class="form-text text-muted">{{ field.help_text }}</small>
+                        {{ field.as_widget }}
+                    {% else %} {# other elements can be displayed normally #}
+                        {{ field.label_tag}}
+                        {% if form.is_bound %}
+                            {% if field.errors %}
+                                {% render_field field class="form-control is-invalid" %}
+                                {% for error in field.errors %}
+                                    <div class="invalid-feedback">
+                                        {{ error }}
+                                    </div>
+                                {% endfor %}
+                            {% else %}
+                                {% render_field field class="form-control is-valid" %}
+                            {% endif %}
+                        {% else %}
+                            {% render_field field class="form-control" %}
+                        {% endif %}
+                        {% if field.help_text %}
+                            <small class="form-text text-muted">{{ field.help_text }}</small>
+                        {% endif %}
+                    {% endif %}
+                </div>
+            {% endfor %}
+
+            <input class="btn btn-primary" type="submit" value="Save"/>
+            <a class="btn" href="{% url 'home:ownProfile' %}">Cancel</a>
+        </form>
+    </div>
+{% endblock %}

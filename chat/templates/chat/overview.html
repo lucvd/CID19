@@ -1,0 +1,77 @@
+{% extends 'home/base.html' %}
+{%load widget_tweaks %}
+{% load static %}
+
+{% block sidebar %}
+    <div class="container-fluid scrollwindow m-0 ">
+        {% for participation in participations %}
+            <a class="container wordbreak btn btn-light p-1 m-1 tag-filter-category large-text-button" href="{% url "chat:detail" participationID=participation.id conversationname=participation.get_conversation_name|slugify %}">
+                <div class="card">
+                    <div class="card-title wordbreak my-1">
+                        <b>{{ participation.get_conversation_name }}</b>{% with unread=participation.amount_unread %}
+                        {% if  unread > 0%}
+                            <span class="badger badge-pill badge-danger" id="conversationCard{{ participation.id }}">{{ unread}}</span>
+                        {% endif %}
+                    {% endwith %}
+                    </div>
+                    <div class="card-footer wordbreak">
+                        {% if participation.conversation.anonymous %}
+                            Last message
+                        {% else %}
+                            {{ participation.conversation.last_message.sender.first_name }}
+                        {% endif %}
+                        : {{ participation.conversation.last_message.content|truncatechars:20}}
+                    </div>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+{% endblock sidebar %}
+
+
+{% block contentbody %}
+
+    <div class="jumbotron" id="activeConversation" data-participationID="{{ participation.id }}">
+        <h1 class="wordbreak">
+            {% if participation.conversation.anonymous %}
+                <a href="{% url 'home:project' projectID=participation.conversation.project_id slugTitle=participation.conversation.project|slugify %}">{{ participation.conversation.project }}</a>
+            {% else %}
+                {% for user in participants %}
+                    <a href="{% url 'home:profile' userID=user.id slugName=user.get_full_name|slugify %}">{{ user.get_full_name }}</a>
+                    {% if not forloop.first %}, {% endif %}
+                {% endfor %}
+            {% endif %}
+
+        </h1>
+
+
+        <div class="scrollwindow" id="chat-scroll-div">
+            {% for message in messages %}
+                <div class="my-2 d-flex card {% if userid == message.sender_id %}flex-row-reverse text-right {% else %}flex-row text-left{% endif %}">
+                    <div class="card-header">
+                        {% if message.sender_id in anonymousUserIDs %}
+                            <a href="{% url 'home:project' projectID=message.conversation.project.id slugTitle=message.conversation.project.title|slugify %}">Project owner</a>
+                        {% else %}
+                            <a href="{% url 'home:profile' userID=message.sender.id slugName=message.sender.get_full_name|slugify %}">{{ message.sender.get_full_name }}</a>
+                        {% endif %}
+
+                    </div>
+                    <div class="card-body">{{ message.content }}</div>
+                </div>
+
+            {% endfor %}
+
+        </div>
+        <form action="{% url 'chat:sendMessage' participationID=participation.id%}" class="container m-0 p-0 form-inline" method="post">
+            {% csrf_token%}
+            {% render_field messageForm.message class="form-control col" rows="2" %}
+            <input type="submit" class="btn btn-outline-dark m-2 col-2" value="Send">
+        </form>
+
+    </div>
+
+{% endblock contentbody %}
+
+{% block javascript %}
+    <script src="{% static 'chat/js/updateLastRead.js' %}"></script>
+{% endblock javascript %}

@@ -1,0 +1,26 @@
+{% extends 'home/base.html' %}
+{% load widget_tweaks %}
+{% block content %}
+
+    <div class="jumbotron">
+    <h3 class="wordbreak">Send a new message
+        {% if project %}
+            about <a href="{% url 'home:project' projectID=project.id slugTitle=project.title|slugify %}">{{ project.title }}</a>
+        {% else %}
+            to <a href="{% url 'home:profile' userID=otherUser.id slugName=otherUser.get_full_name|slugify %}">{{ otherUser.get_full_name }}</a>
+        {% endif %}
+    </h3>
+        {% if otherUser %}
+            <form action="{% url 'chat:newMessage' userID=otherUser.id %}" class="container m-0 p-0 form-inline" method="post">
+        {% else %}
+            <form action="{% url 'chat:newMessage' projectID=project.id %}" class="container m-0 p-0 form-inline" method="post">
+        {% endif %}
+            {% csrf_token%}
+            {% render_field messageForm.message class="form-control col" rows="5" %}
+            <input type="submit" class="btn btn-outline-dark m-2 col-2" value="Send">
+        </form>
+
+    </div>
+
+
+{% endblock content %}

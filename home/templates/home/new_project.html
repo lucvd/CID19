@@ -1,0 +1,87 @@
+{% extends 'home/base.html' %}
+{% load widget_tweaks %}
+{% load static %}
+{% load filters %}
+
+{% block content %}
+{% with url_name=request.resolver_match.url_name %}
+    <div class="jumbotron">
+        {% if url_name == 'editproject' %}
+            <h1>Edit project</h1>
+        {% else %}
+            <h1>Create a new project</h1>
+        {% endif %}
+        <form method="post" novalidate>
+            {% csrf_token %}
+
+            {% for hidden_field in form.hidden_fields %}
+                {{ hidden_field }}
+            {% endfor %}
+
+            {% if form.non_field_errors %}
+                <div class="alert alert-danger" role="alert">
+                    {% for error in form.non_field_errors %}
+                        {{ error }}
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            {% for field in form.visible_fields %}
+                <div class="form-group {% if field.field.required %}required{% endif %}">
+                    {% if field|is_checkbox %} {# display checkboxes differently #}
+                        <div class="checkbox">
+                            <label class='my-0' for="{{ field.auto_id }}"> {{ field }} {{ field.label }}</label>
+                            <small class="form-text text-muted">{{ field.help_text }}</small>
+                        </div>
+                    {% elif field|is_multiple_choice_field %} {# handle this part different #}
+                        <label class="my-0" for="{{ field.auto_id }}">{{ field.label}}</label>
+                        <small class="form-text text-muted">{{ field.help_text }}</small>
+                        {{ field.as_widget }}
+                    {% else %} {# other elements can be displayed normally #}
+                        {{ field.label_tag}}
+                        {% if form.is_bound %}
+                            {% if field.errors %}
+                                {% render_field field class="form-control is-invalid" %}
+                                {% for error in field.errors %}
+                                    <div class="invalid-feedback">
+                                        {{ error }}
+                                    </div>
+                                {% endfor %}
+                            {% else %}
+                                {% render_field field class="form-control is-valid" %}
+                            {% endif %}
+                        {% else %}
+                            {% render_field field class="form-control" %}
+                        {% endif %}
+                        {% if field.help_text %}
+                            <small class="form-text text-muted">{{ field.help_text }}</small>
+                        {% endif %}
+                    {% endif %}
+                    {% if field.label == 'Keyword' %}
+                        <br>
+                        <button type="button" id="add-keyword" value="create" class="btn btn-block btn-primary">Create</button>
+                        <br>
+
+                        <button type="button" aria-label="Close" id="keyword-button-1" style="display:none"></button>
+                        <button type="button" aria-label="Close" id="keyword-button-2" style="display:none"></button>
+                        <button type="button" aria-label="Close" id="keyword-button-3" style="display:none"></button>
+                        <button type="button" aria-label="Close" id="keyword-button-4" style="display:none"></button>
+                        <button type="button" aria-label="Close" id="keyword-button-5" style="display:none"></button>
+
+                    {% endif %}
+                </div>
+            {% endfor %}
+            {% if url_name == 'editproject' %}
+                <button type="submit" name="submit_form" value="submit_form" class="btn btn-primary">Save changes</button>
+            {% else %}
+                <button type="submit" name="submit_form" value="submit_form" class="btn btn-primary">Create project</button>
+            {% endif %}
+        </form>
+    </div>
+{% endwith %}
+{% endblock content %}
+
+{% block javascript %}
+    <script src="{% static 'home/js/customScripts.js' %}"></script>
+{% endblock javascript %}
+

@@ -1,0 +1,315 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Connect-ID</title>
+
+    <link rel="shortcut icon" href="{%  static 'home/img/favicon.png' %}">
+
+    {# Bootstrap core CSS #}
+    <link href="{% static 'home/landingpage/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet"/>
+
+    {# Custom fonts for this template #}
+    <link href="{% static 'home/landingpage/vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    {# Custom styles for this template #}
+    <link href="{% static 'home/landingpage/css/agency.css' %}" rel="stylesheet"/>
+
+</head>
+
+<body id="page-top">
+
+{# Navigation #}
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+        <a class="nav-link text-uppercase text-white-50 js-scroll-trigger" href="#page-top">Connect-ID</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav text-uppercase ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#visie">Visie</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#praktisch">Praktisch</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#succesverhalen">Succesverhalen</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#partners">Partners</a>
+                </li>
+                <li class="nav-item">
+                    {% if loggedin %}
+                        <a class="nav-link js-scroll-trigger " href="{% url 'home:projects' %}"><b>{{ user.get_full_name }}</b></a>
+                    {% else %}
+                        <a class="nav-link js-scroll-trigger " href="{% url 'home:login' %}?next={{ request.path }}">Log In</a>
+                    {% endif %}
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+{# Header #}
+<header class="masthead">
+    <div class="container">
+        <div class="intro-text">
+            <div class="intro-heading">Let's bring people and ideas together</div>
+            <div class="intro-lead-in">Explore, Communicate, Cooperate</div>
+            {% if loggedin %}
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger wordbreak" href="{% url 'home:projects' %}?next={{ request.path }}">Welcome back, {{ user.get_full_name}}</a>
+            {% else %}
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{% url 'home:login' %}?next={{ request.path }}">Log in</a>
+            {% endif %}
+        </div>
+    </div>
+</header>
+
+{# Visie #}
+<section id="visie" class="bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading text-uppercase">Visie</h2>
+                <h3 class="section-subheading text-muted"></h3>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-6">
+                <img class="img-fluid" src="{% static 'home/landingpage/img/logos/connect-id.png' %}" alt="">
+            </div>
+            <div class="col-md-6 text-justify text-muted ">
+                Connect-ID brengt ondernemersideeën en ondernemende personen samen.
+                Ondernemersideeën -en projecten raken niet altijd voldoende uit de startblokken wegens een gebrek aan tijd,
+                middelen, expertise, creativiteit, ondernemerskennis, partners, ... Op Connect-ID kan je ondernemersideeën, interesse in ondernemerschap en gezochte expertise kenbaar maken zodat je de juiste partners vindt en ermee contact legt om een samenwerking te bespreken.
+                Heeft jouw ondernemersidee een boost nodig of denkt je dat je ondernemend bent en expertise kan bijbrengen?
+                Dan is Connect-ID de ideale plaats voor jou.
+            </div>
+        </div>
+    </div>
+</section>
+
+{# over #}
+<section id="praktisch" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading text-uppercase">Praktisch</h2>
+                <h3 class="section-subheading text-muted"></h3>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-4">
+            <span class="fa-stack fa-4x">
+              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+              <i class="fa fa-share-alt fa-stack-1x fa-inverse"></i>
+            </span>
+                <h4 class="service-heading">Deel je kennis</h4>
+                <p class="text-muted">
+                    Op Connect-ID kan je zelf een concept voor een onderneming uitwerken of bijdragen aan het idee van iemand anders met de kennis uit je eigen vakgebied.
+                </p>
+            </div>
+            <div class="col-md-4">
+            <span class="fa-stack fa-4x">
+              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+              <i class="fa fa-users fa-stack-1x fa-inverse"></i>
+            </span>
+                <h4 class="service-heading">Vind een match</h4>
+                <p class="text-muted">
+                    Zoek je nog iemand met marketingskills? Of eerder een applicatie ontwikkelaar? Via Connect-ID vind je de juiste personen met de gepaste kennis en skills.
+                </p>
+            </div>
+            <div class="col-md-4">
+            <span class="fa-stack fa-4x">
+              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+              <i class="fa fa-handshake-o fa-stack-1x fa-inverse"></i>
+            </span>
+                <h4 class="service-heading">Werk samen</h4>
+                <p class="text-muted">
+                    Samen met je nieuwe team word je droomonderneming werkelijkheid! Door je project up-to-date te houden kan je steeds nieuwe partners vinden in elke fase van de onderneming!
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{# successverhalen #}
+<section id="succesverhalen" class="bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading text-uppercase">Succesverhalen</h2>
+                <h3 class="section-subheading text-muted">Mede dankzij Connect-ID zijn volgende ondernemingen succesvol gestart</h3>
+            </div>
+        </div>
+            <div class="row">
+        {% for story in successtories %}
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a class="portfolio-link" data-toggle="modal" href="#modalsuccessstory{{ story.id }}">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img class="img-fluid" height="200px" width="200px" src="{{ story.picture.url }}" alt="{{ story }}">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>{{ story }}</h4>
+                        <p class="text-muted">{{ story.subtitle}}</p>
+                    </div>
+                </div>
+        {% endfor %}
+            </div>
+    </div>
+</section>
+
+
+{# partners #}
+<section id="partners">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading text-uppercase">Partners</h2>
+                <h3 class="section-subheading text-muted">Connect-ID is ontstaan met financiële steun van Smart Hub Vlaams-Brabant</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <a href="https://www.voka.be/" target="_blank">
+                    <img class="img-fluid d-block mx-auto" src="{% static 'home/landingpage/img/logos/voka.png' %}" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <a href="https://www.voka.be/bryo" target="_blank">
+                    <img class="img-fluid d-block mx-auto" src="{% static 'home/landingpage/img/logos/bryo.jpg' %}" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <a href="https://www.vlaamsbrabant.be/index.jsp" target="_blank">
+                    <img class="img-fluid d-block mx-auto" src="{% static 'home/landingpage/img/logos/provincieVlaamsBrabant.png' %}" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <a href="https://iiw.kuleuven.be/groept" target="_blank">
+                    <img class="img-fluid d-block mx-auto" src="{% static 'home/landingpage/img/logos/kuleuven.png' %}" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{# footer #}
+<footer>
+    <div class="container">
+
+        <div class="row">
+            <div class="col text-white-50">
+                Connect-ID | {{ currentYear }} | Let's bring people and ideas together
+            </div>
+        </div>
+
+        {% comment %}
+        <div class="row">
+            <div class="col-md-4">
+                <span class="copyright">Copyright &copy; Your Website 2018</span>
+            </div>
+            <div class="col-md-4">
+                <ul class="list-inline social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul class="list-inline quicklinks">
+                    <li class="list-inline-item">
+                        <a href="#">Privacy Policy</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#">Terms of Use</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        {% endcomment %}
+    </div>
+</footer>
+
+{# successverhalen modals #}
+{% for story in successtories %}
+    <div class="portfolio-modal modal fade" id="modalsuccessstory{{ story.id }}" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="modal-body">
+                                {# Project details go here #}
+                                <h2 class="text-uppercase">{{ story }}</h2>
+                                <p class="item-intro text-muted">{{ story.subtitle }}</p>
+                                <img class="img-fluid d-block mx-auto" height="700px" width="700px" src="{{ story.picture.url }}" alt="">
+                                <p>
+                                    {{ story.abstract }}
+                                </p>
+                                <p><a target="_blank" href="{{ story.website }}">Bezoek de website</a></p>
+                                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                    <i class="fa fa-times"></i>
+                                    Sluiten</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+
+
+{# Bootstrap core javascript #}
+<script src="{% static "home/landingpage/vendor/jquery/jquery.min.js" %}"></script>
+<script src="{% static "home/landingpage/vendor/bootstrap/js/bootstrap.bundle.min.js" %}"></script>
+
+{# plugin javascript #}
+<script src="{% static "home/landingpage/vendor/jquery-easing/jquery.easing.min.js" %}"></script>
+
+{# contact form javascript #}
+<script src="{% static "home/landingpage/js/jqBootstrapValidation.js" %}"></script>
+<script src="{% static "home/landingpage/js/contact_me.js" %}"></script>
+
+{# custom scripts for this template #}
+<script src="{% static "home/landingpage/js/agency.min.js" %}"></script>
+
+</body>
+
+</html>

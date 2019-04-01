@@ -1,0 +1,32 @@
+{% load static %}
+{% load compress %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+
+    <link rel="shortcut icon" href="{%  static 'home/img/favicon.png' %}">
+    <link href="{% static 'home/css/error_page_styling.css' %}" rel="stylesheet">
+
+    {# To scale on mobile device #}
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+
+<body>
+<div id="outer">
+    <div id="container">
+        <h1>
+            {% block heading %}{% endblock %}
+        </h1>
+        <p>
+            {% block explenationtext %}{% endblock %}
+        </p>
+        <a href="{% url 'home:index' %}"><button>Go Back</button></a>
+    </div>
+</div>
+</body>
+</html>

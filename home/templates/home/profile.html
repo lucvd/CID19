@@ -1,0 +1,84 @@
+{% extends 'home/base.html' %}
+{% load rules %}
+{% load static %}
+
+{% block stylesheets %}
+    <link href="{% static 'home/css/profilepicture_hover_to_edit.css' %}" rel="stylesheet">
+{% endblock stylesheets %}
+
+{% block content %}
+
+    <div class="jumbotron">
+        <div class="container">
+            <div class="row">
+                {% if profile.profilePicture %}
+                    <div class="col-lg-5 col-xl-4">
+                        {% if profile.user.id == userID %}
+                            <div class="hovereffect">
+                                <img class="img-responsive" src="{{ profile.profilePicture.url }}" alt="">
+                                <a href="{%  url 'home:editprofilepicture' %}">
+                                    <div class="overlay">
+                                        <h2>Change profile picture</h2>
+                                    </div>
+                                </a>
+                            </div>
+                        {% else %}
+                            <img class="img-responsive" src="{{ profile.profilePicture.url }}" alt="">
+                        {% endif %}
+                    </div>
+                {% endif %}
+                <div class="col-lg-7 col-xl-8">
+                    <h1 class="display-4">{{ profile.user.get_full_name }}
+                        {% if user.id == profile.user.id %}
+                            <span><a class="btn btn-info" href="{% url 'home:editprofile' %}">Edit Profile</a></span>
+                        {% else %}
+                            <span><a class="btn btn-success" href="{% url 'chat:newMessage' userID=profile.user_id %}">Send message</a></span>
+                        {% endif %}
+                    </h1>
+                    {% if profile.headline %}<p>{{ profile.headline }}</p>{% endif %}
+                    {% if profile.linkedin %}<div class="col"><a href="{{ profile.linkedin }}" target="_blank">Linked-In</a></div>{% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            {% if projects %}
+                <div class="col-12 col-lg-4">
+                    <h3>Check out my project{% if projects.count > 1 %}s{% endif %}:</h3>
+                    <ul>
+                        {% for project in projects %}
+                            <li><a href="{% url 'home:project' projectID=project.id slugTitle=project|slugify %}">{{ project }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="col-lg-8">
+            {% else %}
+                <div class="col-12">
+            {% endif %} {# projects #}
+                {% if profile.whyImHere %}
+                    <h2>Why I'm here</h2>
+                    <p class="word-wrap">{{ profile.whyImHere }}</p>
+                {% endif %}
+                {% if profile.bio%}
+                    <h2>About me</h2>
+                    <p class="word-wrap">{{ profile.bio }}</p>
+                {% endif %}
+                {% if profile.typeOfUser%}
+                    <h2>I'm this kind of user</h2>
+                    <p class="word-wrap">{{ profile.typeOfUser }}</p>
+                {% endif %}
+                {% if profile.website%}
+                    <h2>Check out my website!</h2>
+                    <a class =  "wordbreak" href={{ profile.website }}>{{ profile.website }}</a>
+                {% endif %}
+                {% if profile.extraInfo%}
+                    <h2>Here is some extra info about me</h2>
+                    <p class="word-wrap">{{ profile.extraInfo }}</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}

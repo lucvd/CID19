@@ -1,0 +1,19 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+
+    {% for fb in feedbacks %}
+        <div class="container">
+            <a href="{% url 'home:profile' userID=fb.user.id slugName=fb.user.get_full_name|slugify %}"><h2>{{ fb.user.get_full_name }}</h2></a>
+            <h5>Feedback receved at {{ fb.created }}</h5>
+            <h6>{{ fb.user.email }}</h6>
+            {{ fb.comment }}
+            <br>
+            {% if fb.screenshot %}
+                <a class="portfolio-link" target="_blank" href="{{ fb.screenshot.url }}">Check screenshot</a>
+            {% endif %}
+        </div>
+        <br>
+    {% endfor %}
+{% endblock content %}

@@ -1,0 +1,110 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+// https://getbootstrap.com/docs/4.0/getting-started/theming/
+// TODO ni alles van bootstrap includen
+// https://coursetro.com/posts/design/73/How-to-Customize-Bootstrap-4-with-Sass
+
+@import "../bootstrap/scss/_functions";
+@import "../bootstrap/scss/_variables";
+@import "../bootstrap/scss/mixins/_breakpoints";
+
+
+body {
+  padding-top: 50px !important; // for the fixed bootstrap navbar, navbar is 50 px high
+}
+
+.wordbreak{
+  word-break:break-word;
+  white-space: normal;
+}
+
+html, body { height: 100%; }
+
+$theme-colors: (
+        "primary": #2B6BA2,
+);
+
+// shadow below the navbar
+.navbar {
+  -webkit-box-shadow: 0 0px 6px 3px #999;
+  -moz-box-shadow: 0 0px 6px 3px #999;
+  box-shadow: 0 0px 6px 3px #999;
+  // original values: 0 8px 6px -6px #999;
+  // ook cool, groter schaduwbereik: 0 -4px 30px 3px;
+}
+
+.cardShadow {
+  -webkit-box-shadow: 3px 3px 6px grey;
+  -moz-box-shadow: 3px 3px 6px grey;
+  box-shadow: 3px 3px 6px grey;
+}
+
+.projectCard {
+  min-height: 300px;
+}
+
+.userCard{
+  min-height: 600px;
+}
+
+.projectButton{
+  margin-top: 10px;
+}
+
+.form-group.required label:before {
+   content:"*";
+   color:red;
+}
+
+.btn {
+  -webkit-box-shadow: 1px 1px 5px grey;
+  -moz-box-shadow: 1px 1px 5px grey;
+  box-shadow: 1px 1px 5px grey;
+}
+
+
+.card-subtitle {
+  color: gray !important;
+  font-size: smaller !important;
+}
+
+.home-favorite-button {
+  color: white !important;
+}
+
+.vertical-right-aligned { // for the tellme feedback button
+  transform: rotate(-90deg);
+  transform-origin: 100% 100%;
+  position: fixed;
+  right: 0;
+  top: 50%;
+  z-index: 100;
+}
+
+.scrollwindow {
+  //height:90%; /* Fallback incase the browser doesn't support */
+  height: 30vh !important; /* This will calculate the 100% viewport height minus 50px */
+  margin-bottom: 25px;
+  @include media-breakpoint-up(lg) {
+    height: 60vh !important;
+    margin-bottom: 0;
+  }
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+
+.large-text-button{
+  white-space:normal !important;
+  word-wrap: break-word;
+}
+
+.start-hidden {
+  display:none;
+}
+
+.word-wrap{
+  overflow-wrap:break-word;
+}
+
+@import "../bootstrap/scss/bootstrap";
+

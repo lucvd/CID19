@@ -1,0 +1,25 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="row">
+    {% for profile in profiles %}
+        <div class="col-sm-12 col-md-6 col-xl-4 mb-4">
+            <div class="card cardShadow userCard">
+                {% if profile.profilePicture %}<a href="{% url 'home:profile' userID=profile.user_id slugName=profile.user.get_full_name|slugify %}"><img class="card-img-top" src="{{ profile.profilePicture.url }}"/></a>{% endif %}
+                <div class="card-body">
+                    <h5 class="card-title mt-2 mx-2 text-center"><a href="{% url 'home:profile' userID=profile.user_id slugName=profile.user.get_full_name|slugify %}">{{ profile.user.get_full_name }}</a></h5>
+                    {% if profile.headline %}
+                        <p class="card-text mx-2 text-justify">{{ profile.headline }}</p>
+                    {% elif profile.bio %}
+                        <p class="card-text mx-2 text-justify">{{ profile.bio|truncatechars:170 }} {% if profile.bio|length > 170 %} <a href="{% url 'home:profile' userID=profile.user_id slugName=profile.user.get_full_name|slugify %}">see more</a>{% endif %}</p>
+                   {% endif %}
+                    <a class="btn" href="{% url 'home:profile' userID=profile.user_id slugName=profile.user.get_full_name|slugify %}">See profile  </a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+
+{% endblock content %}
+

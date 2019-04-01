@@ -1,0 +1,132 @@
+{% load static %}
+{% load compress %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Connect-ID{% endblock %}</title>
+
+    {% include 'home/google_analytics.html' %}
+
+    <link rel="shortcut icon" href="{%  static 'home/img/favicon.png' %}">
+
+    {# Stylesheets #}
+    {% load static %}
+    {% compress css %}
+        <link rel="stylesheet" type="text/x-scss" href="{% static "home/css/connect_id_theme.scss" %}">
+    {% endcompress %}
+    <link href="{% static 'tellme/feedback.min.css' %}" rel="stylesheet">
+    {# To scale on mobile device #}
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {% block stylesheets %}
+    {% endblock stylesheets %}
+</head>
+<body>
+
+{% block navbar %}
+    {% with url_name=request.resolver_match.url_name %}
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+            <a class="navbar-brand" href="{% url 'home:projects' %}">Connect-ID</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    {% if user.is_staff %}
+                        <li class=" nav-item active">
+                            <a class="nav-link" href="{% url 'admin:index' %}"><strong>Connect-ID Admin</strong></a>
+                        </li>
+                        <li class="nav-item {% if url_name == 'feedback' %}active{% endif %}">
+                            <a class="nav-link" href="{% url 'home:feedback' %}">Feedback</a>
+                        </li>
+                    {% endif %}
+                    <li class="nav-item {% if url_name == 'projects' %}active{% endif %}">
+                        <a class="nav-link" href="{% url 'home:projects' %}">Projects</a>
+                    </li>
+                    <li class="nav-item {% if url_name == 'users' %}active{% endif %}">
+                        <a class="nav-link" href="{% url 'home:users' %}">Users</a>
+                    </li>
+                    <li class="nav-item {% if url_name == 'overview' %}active{% endif %}">
+                        <a class="nav-link" href="{% url 'chat:overview' %}">Messages <span id="unread-message-indicator" hidden class=" badger badge-pill badge-danger"></span></a>
+                    </li>
+                    <li class=" nav-item dropdown{% if url_name == 'home' %} active {% endif %}">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                           data-toggle="dropdown">{{ user.get_full_name }}</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item"
+                               href="{% url 'home:profile' userID=user.id slugName=user.get_full_name|slugify %}"><i class="fas fa-user"></i> Profile</a>
+                            {#  <a class="dropdown-item" href="#">Settings</a> #}
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{% url 'home:newproject' %}"><i class="fas fa-plus"></i> New project</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{% url 'home:projects' %}"><i class="fas fa-cog"></i> Settings</a> <!-- TODO make link go to actual settings page -->
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{% url 'home:logout' %}"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    {% endwith %}
+{% endblock navbar %}
+
+
+
+<div class="container m-5">
+    {% block header %}{% endblock header %}
+</div>
+
+
+
+<div class="container">
+    {% block content %}
+        <div class="row">
+            <div class="col-lg-3 hidden-sm hidden-md" >
+                {% block sidebar %}{% endblock sidebar %}
+            </div>
+            <div class="col-sm-12 col-lg-9">
+                {% block contentbody %}<h1>BASE HTML.</h1>{% endblock contentbody %}
+            </div>
+        </div>
+    {% endblock content %}
+</div>
+
+
+
+
+{% block footer %}{% endblock footer %}
+
+
+
+{# jQuery first, then Popper.js, then Bootstrap JS #}
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+<script src="{% static 'home/js/unread_chat_counter.js' %}"></script>
+
+{# Font Awesome icons #}
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+
+
+{% block feedbackbutton %}
+    <button type="button" id="feedback-btn" class="btn btn-info vertical-right-aligned">
+        Feedback
+    </button>
+    {% include 'home/tellme.html' %}
+{% endblock feedbackbutton %}
+
+{# Custom JS scripts #}
+{% block javascript %}
+    {# Put personal pagespecific js scripts here #}
+{% endblock javascript %}
+
+</body>
+</html>
