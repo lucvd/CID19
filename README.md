@@ -6,3 +6,5 @@ projects can get in contact with the one who put the project on the website and 
 
 ## This project makes use of following programs
 [![Browserstack-logo@2x](https://user-images.githubusercontent.com/34754166/55586482-530ac080-5729-11e9-92f5-2289b5f479e6.png)](http://browserstack.com)
+[![bugsnag](https://user-images.githubusercontent.com/34754166/55588366-ddedba00-572d-11e9-9e74-d0776c15da16.png)
+](https://www.bugsnag.com/)
