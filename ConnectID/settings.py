@@ -215,7 +215,8 @@ LOGIN_REDIRECT_URL = '/loginSuccess'
 # TODO https://docs.djangoproject.com/en/2.0/topics/email/
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-# for django_jenkins config
+# for django_jenkins config, was an example but when uncommented the jenkins command doesn't work
+'''
 JENKINS_TASKS = (
     'django_jenkins.tasks.run_pep8',
     'django_jenkins.tasks.run_pyflakes',
@@ -223,3 +224,4 @@ JENKINS_TASKS = (
     'django_jenkins.tasks.run_csslint',
     'django_jenkins.tasks.run_sloccount'
 )
+'''
