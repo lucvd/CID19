@@ -65,6 +65,7 @@ INSTALLED_APPS = [
     'social_django',
     'watson',
     'django_cleanup',
+    'bugsnag'
 ]
 
 TELLME_FEEDBACK_EMAIL = EMAIL_HOST_USER
@@ -77,6 +78,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'bugsnag.django.middleware.BugsnagMiddleware',
 ]
 
 # for libsass compiler
@@ -213,3 +215,25 @@ LOGIN_REDIRECT_URL = '/loginSuccess'
 
 # TODO https://docs.djangoproject.com/en/2.0/topics/email/
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+BUGSNAG = {
+    'api_key': 'b933184587896544b7c0794f0d8bff09'
+}
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+
+    'root': {
+        'level': 'ERROR',
+        'handlers': ['bugsnag'],
+    },
+
+    'handlers': {
+        'bugsnag': {
+            'level': 'INFO',
+            'class': 'bugsnag.handlers.BugsnagHandler',
+        },
+    }
+}
+

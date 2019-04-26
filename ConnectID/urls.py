@@ -27,9 +27,9 @@ urlpatterns = [
     url(r'^', include("home.urls")),
 ]
 
-handler400 = 'home.views.bad_request'
-handler403 = 'home.views.permission_denied'
-handler404 = 'home.views.not_found'
+#handler400 = 'home.views.bad_request'
+#handler403 = 'home.views.permission_denied'
+#handler404 = 'home.views.not_found'
 handler500 = 'home.views.server_error'
 
 

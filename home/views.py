@@ -10,6 +10,7 @@ from django.db.models import Q
 from requests.exceptions import MissingSchema
 from rules.contrib.views import objectgetter, permission_required
 from tellme.models import Feedback
+import bugsnag
 
 from .forms import ProfileForm, ProfilePictureForm, ProjectForm
 from .models import Profile, Project, User, SuccessStory, FeedbackProject
@@ -51,6 +52,7 @@ def loginSuccess(request):
         This view gets called after logging in, to redirect to the home page (ommitting the landing page)
         If his profile picture is not set, it should redirect to the edit profile picture page
     '''
+    bugsnag.notify(Exception("Testing bugsnag :)"))
     if request.user.is_authenticated:
         if request.user.profile.profilePicture:
             return redirect('/projects')
@@ -185,6 +187,7 @@ def users(request):
 @login_required(login_url='/login')
 @permission_required('projects.can_view', fn=objectgetter(Project, 'projectID'))
 def projectpage(request, projectID, slugTitle):
+    bugsnag.notify(Exception("Testing bugsnag :)"))
     project = get_object_or_404(Project, id=projectID)
 
     context = {
