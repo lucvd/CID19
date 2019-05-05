@@ -16,6 +16,7 @@ social-auth-app-django==2.1.0
 
 #for thesis
 bugsnag #I think this should be added at least, Alexander didn't add this but wouldn't work otherwise
+django_jenkins
 
 #selenium
 #django-jenkins
