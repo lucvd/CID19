@@ -12,3 +12,19 @@ django-widget-tweaks==1.4.2
 django-watson==1.5.2 #Search engine
 django-cleanup==2.1.0 #To automatically delete old files when new ones are uploaded (profile picture for example)
 social-auth-app-django==2.1.0
+
+
+#for thesis
+bugsnag #I think this should be added at least, Alexander didn't add this but wouldn't work otherwise
+
+#selenium
+#django-jenkins
+#multiprocessing
+#nose
+#behave ?not anymore, switched to lettuce
+#paver
+#psutil ???
+#lettuce
+#pytest?
+#pytest-xdist? for parallel
+#browserstack-local

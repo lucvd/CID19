@@ -65,7 +65,9 @@ INSTALLED_APPS = [
     'social_django',
     'watson',
     'django_cleanup',
-    'bugsnag'
+    'bugsnag',
+    'django_jenkins'
+
 ]
 
 TELLME_FEEDBACK_EMAIL = EMAIL_HOST_USER
@@ -237,3 +239,12 @@ LOGGING = {
     }
 }
 
+# for django_jenkins config, was an example but when uncommented some don't work
+JENKINS_TASKS = (
+    'django_jenkins.tasks.run_pep8',
+    'django_jenkins.tasks.run_pyflakes',
+ #   'django_jenkins.tasks.run_pylint',
+ #   'django_jenkins.tasks.run_jslint',
+ #   'django_jenkins.tasks.run_csslint',
+ #   'django_jenkins.tasks.run_sloccount'
+)

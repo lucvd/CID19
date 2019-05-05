@@ -1,0 +1,15 @@
+{
+  "server": "hub.browserstack.com",
+  "user": "jeroenveltmans1",
+  "key": "BwHWqoz9bA29UXwuBGmT",
+
+  "capabilities": {
+    "build": "behave-browserstack",
+    "name": "single_test",
+    "browserstack.debug": true
+  },
+
+  "environments": [{
+    "browser": "chrome"
+  }]
+}
