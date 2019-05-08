@@ -6,7 +6,6 @@ django-libsass==0.7
 rules==1.3
 django-tellme==0.6.5
 # for messaging
-coverage==3.7.1
 django-coverage==1.2.4
 django-widget-tweaks==1.4.2
 django-watson==1.5.2 #Search engine
@@ -18,14 +17,12 @@ social-auth-app-django==2.1.0
 bugsnag #I think this should be added at least, Alexander didn't add this but wouldn't work otherwise
 django_jenkins
 
-#selenium
-#django-jenkins
-#multiprocessing
-#nose
-#behave ?not anymore, switched to lettuce
-#paver
-#psutil ???
-#lettuce
-#pytest?
-#pytest-xdist? for parallel
+selenium
+django-jenkins
+#multiprocessing    already pre-installed
+nose
+behave
+paver
+psutil
 #browserstack-local
+coverage

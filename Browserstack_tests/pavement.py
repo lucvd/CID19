@@ -28,8 +28,21 @@ def run(args):
     if args[0] in ('single', 'local'):
         run_behave_test(args[0], args[0])
     else:
+        '''
+        jobs = []
+        multiprocessing.set_start_method('spawn')
+        for i in range(4):
+            p = multiprocessing.Process(target=run_behave_test, args=(args[0], "single", i))
+            jobs.append(p)
+            p.start()
+        '''
         jobs = []
         for i in range(4):
+            '''  #p = multiprocessing.Process(target=print, args=("parallel", "single", i))
+  cmd = "python " + str(file_name) + " " + str(json_name) + " " + str(counter)
+  process.append(subprocess.Popen(cmd, shell=True))
+  jobs.append(p)
+  p.start()'''
             p = multiprocessing.Process(target=run_behave_test, args=(args[0], "single", i))
             jobs.append(p)
             p.start()
