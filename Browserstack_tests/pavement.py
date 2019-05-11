@@ -1,7 +1,7 @@
 from paver.easy import *
 from paver.setuputils import setup
-import multiprocessing
 import platform
+from multiprocessing.dummy import Pool as ThreadPool
 
 setup(
     name = "behave-browserstack",
@@ -15,11 +15,13 @@ setup(
     packages=['features']
 )
 
+
 def run_behave_test(config, feature, task_id=0):
     if platform.system() == "Windows":
-        sh('cmd /C "set CONFIG_FILE=config/%s.json && set TASK_ID=%s && behave features/%s.feature"' % (config, task_id, feature))
+        sh('cmd /C "set CONFIG_FILE=config/%s.json && set TASK_ID=%s && behave features/%s.feature --junit --junit-directory reports/%s"' % (config, task_id, feature, task_id))
     else:
         sh('CONFIG_FILE=config/%s.json TASK_ID=%s behave features/%s.feature' % (config, task_id, feature))
+
 
 @task
 @consume_nargs(1)
@@ -28,24 +30,10 @@ def run(args):
     if args[0] in ('single', 'local'):
         run_behave_test(args[0], args[0])
     else:
-        '''
-        jobs = []
-        multiprocessing.set_start_method('spawn')
-        for i in range(4):
-            p = multiprocessing.Process(target=run_behave_test, args=(args[0], "single", i))
-            jobs.append(p)
-            p.start()
-        '''
-        jobs = []
-        for i in range(4):
-            '''  #p = multiprocessing.Process(target=print, args=("parallel", "single", i))
-  cmd = "python " + str(file_name) + " " + str(json_name) + " " + str(counter)
-  process.append(subprocess.Popen(cmd, shell=True))
-  jobs.append(p)
-  p.start()'''
-            p = multiprocessing.Process(target=run_behave_test, args=(args[0], "single", i))
-            jobs.append(p)
-            p.start()
+        pool = ThreadPool(4)
+        jobs = pool.starmap(run_behave_test, [(args[0], "single", "0"), (args[0], "single", "1"), (args[0], "single", "2"), (args[0], "single", "3")])
+        #use jobs for something later maybe?
+
 
 @task
 def test():

@@ -10,12 +10,23 @@
   },
 
   "environments": [{
-    "browser": "chrome"
+    "browser": "chrome",
+    "browser_version": "73.0",
+    "os": "Windows",
+    "os_version": "10"
   },{
-    "browser": "firefox"
+    "browser": "firefox",
+    "browser_version": "66.0",
+    "os": "Windows",
+    "os_version": "10"
   },{
-    "browser": "safari"
+    "browser": "safari",
+    "os": "OS X",
+    "os_version": "Mojave"
   },{
-    "browser": "internet explorer"
+    "browser": "Edge",
+    "browser_version": "18.0",
+    "os": "Windows",
+    "os_version": "10"
   }]
 }
