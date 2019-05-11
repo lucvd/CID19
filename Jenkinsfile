@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                git 'https://github.com/lucvd/CID19.git'
+                echo 'Building...'
             }
         }
         stage('Test main') {
