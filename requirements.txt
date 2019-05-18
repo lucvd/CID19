@@ -27,3 +27,4 @@ psutil
 #browserstack-local
 coverage
 pep8
+pyflakes
