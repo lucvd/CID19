@@ -26,3 +26,4 @@ paver
 psutil
 #browserstack-local
 coverage
+pep8
