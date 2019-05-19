@@ -1,5 +1,9 @@
 @echo off
-call buildenv\Scripts\activate
+call mkdir buildenv
+call cd buildenv
+call D:\School\Industrieel_Ingenieur_Master\Python3.6\python.exe -m venv ..\buildenv
+call Scripts\activate
+call cd ..
+call pip install -r requirements.txt
 call copy %secretsdjango%
 call python manage.py jenkins --enable-coverage
-call del secrets.yml
