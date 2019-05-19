@@ -4,7 +4,6 @@ pipeline {
     stages {
         stage('Test main') {
             steps {
-                echo 'Testing..'
                 withCredentials([file(credentialsId: 'secrets_CID19', variable: 'secretsdjango')]) {
                     script {
                         if(isUnix()){
