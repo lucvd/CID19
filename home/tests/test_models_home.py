@@ -40,7 +40,7 @@ class ProfileBasicTestCase(TestCase):
         User.objects.create_user(username="Testermans", password="123456789")
 
     def test_profile_created_when_user_created(self):
-        ''' An empty profile should be made for every user. Use the _base_manager to get the profiles because de default one is overwritten'''
+        ''' An empty profile should be made for every user. Use the _base_manager to get the profiles because the default one is overwritten'''
         user = User.objects.get(username="Testermans")
         self.assertTrue(Profile._base_manager.get(user=user))
 

@@ -19,7 +19,6 @@ django_jenkins
 
 selenium
 django-jenkins
-#multiprocessing    already pre-installed
 nose
 behave
 paver
@@ -28,3 +27,4 @@ psutil
 coverage
 pep8
 pyflakes
+#pylint     #django_jenkins gives errors but probably run separately

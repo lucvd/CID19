@@ -2,6 +2,17 @@ pipeline {
     agent any
 
     stages {
+        stage('Build') {
+            steps {
+                script {
+                    if(isUnix()){
+                        sh label: '', script: 'build.sh'
+                    }else{
+                        bat label: '', script: 'build.bat'
+                    }
+                }
+            }
+        }
         stage('Test main') {
             steps {
                 echo 'Testing..'
