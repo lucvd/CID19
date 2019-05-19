@@ -23,7 +23,7 @@ nose
 behave
 paver
 psutil
-#browserstack-local
+browserstack-local
 coverage
 pep8
 pyflakes
