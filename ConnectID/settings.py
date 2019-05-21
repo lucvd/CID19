@@ -244,7 +244,7 @@ LOGGING = {
 JENKINS_TASKS = (
     'django_jenkins.tasks.run_pep8',
     'django_jenkins.tasks.run_pyflakes',
- #   'django_jenkins.tasks.run_pylint',
+    'django_jenkins.tasks.run_pylint',
  #   'django_jenkins.tasks.run_jslint',
  #   'django_jenkins.tasks.run_csslint',
  #   'django_jenkins.tasks.run_sloccount'
@@ -272,3 +272,14 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 import dj_database_url
 prod_db  =  dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)
+
+from django_jenkins.tasks import run_pylint
+
+
+class Lint:
+    class Run(run_pylint.lint.Run):
+        def __init__(self, *args, **kwargs):
+            super().__init__(*args, do_exit=kwargs.pop("exit"), **kwargs)
+
+
+run_pylint.lint = Lint
