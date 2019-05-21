@@ -1,0 +1,1097 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1f5ceaef-325c-45bc-a730-da38650654ce" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Browserstack_tests/browserstack_tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runtime.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Browserstack_tests/config/parallel.json" beforeDir="false" afterPath="$PROJECT_DIR$/Browserstack_tests/config/parallel.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Browserstack_tests/features/single.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Browserstack_tests/features/single.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Browserstack_tests/features/steps/steps.py" beforeDir="false" afterPath="$PROJECT_DIR$/Browserstack_tests/features/steps/steps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Browserstack_tests/pavement.py" beforeDir="false" afterPath="$PROJECT_DIR$/Browserstack_tests/pavement.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Browserstack_tests/selenium_example.py" beforeDir="false" afterPath="$PROJECT_DIR$/Browserstack_tests/selenium_example.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/CID19$Test__chat_tests_test_jenkins_delete_later_jenkinsunittest.coverage" NAME="Test: chat.tests.test_jenkins_delete_later.jenkinsunittest Coverage Results" MODIFIED="1555253589347" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/CID19$Test__home_tests_test_models_home_ProjectTestCase_test_ordering_first_created_project_last_in_query.coverage" NAME="Test: home.tests.test_models_home.ProjectTestCase.test_ordering_first_created_project_last_in_query Coverage Results" MODIFIED="1555253542470" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/CID19$Test__home_tests_test_models_home_ProjectTestCase.coverage" NAME="Test: home.tests.test_models_home.ProjectTestCase Coverage Results" MODIFIED="1555253557879" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1499286785">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="42" />
+          <entry key="project.open.time.0" value="2" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.21" value="1" />
+          <entry key="project.open.time.22" value="3" />
+          <entry key="project.open.time.23" value="7" />
+          <entry key="project.open.time.24" value="7" />
+          <entry key="project.open.time.25" value="1" />
+          <entry key="project.open.time.26" value="2" />
+          <entry key="project.open.time.27" value="2" />
+          <entry key="project.open.time.29" value="2" />
+          <entry key="project.open.time.31" value="1" />
+          <entry key="project.open.time.34" value="2" />
+          <entry key="project.open.time.35" value="1" />
+          <entry key="project.open.time.6" value="5" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.open.time.9" value="2" />
+          <entry key="project.opened" value="43" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="Jenkinsfile" value="4" />
+          <entry key="Procfile" value="1" />
+          <entry key="bat" value="8" />
+          <entry key="browserstack" value="1" />
+          <entry key="coverage" value="5" />
+          <entry key="feature" value="6" />
+          <entry key="gitignore" value="1" />
+          <entry key="html" value="2" />
+          <entry key="json" value="11" />
+          <entry key="log" value="1" />
+          <entry key="md" value="1" />
+          <entry key="py" value="86" />
+          <entry key="report" value="9" />
+          <entry key="sh" value="1" />
+          <entry key="txt" value="8" />
+          <entry key="xml" value="22" />
+          <entry key="yml" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Bat" value="7" />
+          <entry key="Cucumber" value="6" />
+          <entry key="HTML" value="2" />
+          <entry key="JSON" value="11" />
+          <entry key="Markdown" value="1" />
+          <entry key="PLAIN_TEXT" value="31" />
+          <entry key="Python" value="87" />
+          <entry key="XML" value="22" />
+          <entry key="YAML" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="Jenkinsfile" value="150" />
+          <entry key="Procfile" value="63" />
+          <entry key="bat" value="765" />
+          <entry key="dummy" value="12" />
+          <entry key="feature" value="230" />
+          <entry key="json" value="68" />
+          <entry key="py" value="3686" />
+          <entry key="sh" value="62" />
+          <entry key="txt" value="2190" />
+          <entry key="xml" value="35" />
+          <entry key="yml" value="15" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Bash" value="60" />
+          <entry key="Bat" value="716" />
+          <entry key="Cucumber" value="230" />
+          <entry key="JSON" value="68" />
+          <entry key="PLAIN_TEXT" value="2466" />
+          <entry key="Python" value="3686" />
+          <entry key="XML" value="35" />
+          <entry key="YAML" value="15" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Browserstack_tests/selenium_example.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="56" selection-start-line="4" selection-start-column="4" selection-end-line="12" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Browserstack_tests/browserstack_tests.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="553">
+              <caret line="90" selection-start-line="90" selection-end-line="90" />
+              <folding>
+                <element signature="e#0#30#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Browserstack_tests/single.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Browserstack_tests/pavement.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="423">
+              <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/secrets.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ConnectID/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1181">
+              <caret line="156" column="47" selection-start-line="156" selection-start-column="47" selection-end-line="156" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ConnectID/wsgi.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Procfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="19" selection-start-column="19" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/runtime.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="10" selection-start-column="10" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>jenkins</find>
+      <find>hiddendescription</find>
+      <find>hiddendesc</find>
+      <find>ordering_la</find>
+      <find>project</find>
+      <find>q</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/runtest.sh" />
+        <option value="$PROJECT_DIR$/chat/tests/__init__.py" />
+        <option value="$PROJECT_DIR$/Browserstack_tests/browserstack.py" />
+        <option value="$PROJECT_DIR$/Browserstack_tests/single_test.py" />
+        <option value="$PROJECT_DIR$/Browserstack_tests/features/sample.feature" />
+        <option value="$PROJECT_DIR$/Browserstack_tests/features/config/single.json" />
+        <option value="$PROJECT_DIR$/Browserstack_tests/features/config/parallel.json" />
+        <option value="$PROJECT_DIR$/../Projects/venv/Lib/site-packages/lettuce/__init__.py" />
+        <option value="$PROJECT_DIR$/Browserstack_tests/features/steps.py" />
+        <option value="$PROJECT_DIR$/Browserstack_tests/features/terrain.py" />
+        <option value="$PROJECT_DIR$/Browserstack_tests/features/environment.py" />
+        <option value="$PROJECT_DIR$/Browserstack_tests/desperateMeasures/browsers.json" />
+        <option value="$PROJECT_DIR$/Browserstack_tests/desperateMeasures/test.py" />
+        <option value="$PROJECT_DIR$/reports/coverage.xml" />
+        <option value="$PROJECT_DIR$/coverage.xml" />
+        <option value="$PROJECT_DIR$/home/tests/test_models_chat.py" />
+        <option value="$PROJECT_DIR$/chat/tests/test_jenkins_delete_later.py" />
+        <option value="$PROJECT_DIR$/Browserstack_tests/desperateMeasures/run_parallel_tests.py" />
+        <option value="$PROJECT_DIR$/Browserstack_tests/config/single.json" />
+        <option value="$PROJECT_DIR$/home/tests/test_models_home.py" />
+        <option value="$PROJECT_DIR$/build.bat" />
+        <option value="$PROJECT_DIR$/runBrowserstack.bat" />
+        <option value="$PROJECT_DIR$/runtest.bat" />
+        <option value="$PROJECT_DIR$/Jenkinsfile" />
+        <option value="$PROJECT_DIR$/Browserstack_tests/pavement.py" />
+        <option value="$PROJECT_DIR$/ConnectID/settings.py" />
+        <option value="$PROJECT_DIR$/home/views.py" />
+        <option value="$PROJECT_DIR$/manage.py" />
+        <option value="$PROJECT_DIR$/Browserstack_tests/config/parallel.json" />
+        <option value="$PROJECT_DIR$/Browserstack_tests/features/single.feature" />
+        <option value="$PROJECT_DIR$/Browserstack_tests/features/steps/steps.py" />
+        <option value="$PROJECT_DIR$/Browserstack_tests/selenium_example.py" />
+        <option value="$PROJECT_DIR$/Browserstack_tests/single.json" />
+        <option value="$PROJECT_DIR$/Browserstack_tests/browserstack_tests.py" />
+        <option value="$PROJECT_DIR$/Procfile" />
+        <option value="$PROJECT_DIR$/runtime.txt" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/secrets.yml" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="953" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="CID19" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CID19" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CID19" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CID19" type="462c0819:PsiDirectoryNode" />
+              <item name="ConnectID" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CID19" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CID19" type="462c0819:PsiDirectoryNode" />
+              <item name="reports" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/School/Industrieel_Ingenieur_Master/thesis/CID19/runtest.sh" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CID19-master" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\School\Industrieel_Ingenieur_Master\thesis\CID19\Browserstack_tests\features\steps" />
+      <recent name="D:\School\Industrieel_Ingenieur_Master\thesis\CID19\Browserstack_tests\" />
+      <recent name="D:\School\Industrieel_Ingenieur_Master\thesis\CID19\Browserstack_tests\features\" />
+      <recent name="D:\School\Industrieel_Ingenieur_Master\thesis\CID19\Browserstack_tests\features" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\School\Industrieel_Ingenieur_Master\thesis\CID19" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Django tests.Test: chat.tests.test_jenkins_delete_later.jenkinsunittest">
+    <configuration name="Test: chat.tests.test_jenkins_delete_later.jenkinsunittest" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <module name="CID19" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="chat.tests.test_jenkins_delete_later.jenkinsunittest" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: home.tests.test_models_home.ProjectTestCase" type="DjangoTestsConfigurationType" factoryName="Django tests" temporary="true">
+      <module name="CID19" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="home.tests.test_models_home.ProjectTestCase" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: home.tests.test_models_home.ProjectTestCase.test_ordering_first_created_project_last_in_query" type="DjangoTestsConfigurationType" factoryName="Django tests" temporary="true">
+      <module name="CID19" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="home.tests.test_models_home.ProjectTestCase.test_ordering_first_created_project_last_in_query" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="CID19" type="Python.DjangoServer" factoryName="Django server">
+      <module name="CID19" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Django server.CID19" />
+      <item itemvalue="Django tests.Test: chat.tests.test_jenkins_delete_later.jenkinsunittest" />
+      <item itemvalue="Django tests.Test: home.tests.test_models_home.ProjectTestCase.test_ordering_first_created_project_last_in_query" />
+      <item itemvalue="Django tests.Test: home.tests.test_models_home.ProjectTestCase" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Django tests.Test: home.tests.test_models_home.ProjectTestCase" />
+        <item itemvalue="Django tests.Test: home.tests.test_models_home.ProjectTestCase.test_ordering_first_created_project_last_in_query" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1f5ceaef-325c-45bc-a730-da38650654ce" name="Default Changelist" comment="" />
+      <created>1554891434831</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1554891434831</updated>
+    </task>
+    <task id="LOCAL-00001" summary="added jenkins integration">
+      <created>1554919277778</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1554919277778</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added jenkins integration">
+      <created>1554920826566</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1554920826566</updated>
+    </task>
+    <task id="LOCAL-00003" summary="bash .sh file added, works on my device">
+      <created>1554991028256</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1554991028256</updated>
+    </task>
+    <task id="LOCAL-00004" summary="made py manage.py jenkins actually do something">
+      <created>1555153966184</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1555153966184</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added some jenkins tasks">
+      <created>1555154881706</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1555154881706</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added one always true test for jenkins to check">
+      <created>1555253671950</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1555253671950</updated>
+    </task>
+    <task id="LOCAL-00007" summary="added .bat file">
+      <created>1555255365871</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1555255365871</updated>
+    </task>
+    <task id="LOCAL-00008" summary="multiline .bat file by putting call in front">
+      <created>1555255640644</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1555255640644</updated>
+    </task>
+    <task id="LOCAL-00009" summary="don't show the commands on execute">
+      <created>1555255701431</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1555255701431</updated>
+    </task>
+    <task id="LOCAL-00010" summary="secrets.yml copied to jenkins but not accessible by anyone who shouldn't see it">
+      <created>1555257282999</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1555257283000</updated>
+    </task>
+    <task id="LOCAL-00011" summary="better name for secrets variable">
+      <created>1555258090518</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1555258090518</updated>
+    </task>
+    <task id="LOCAL-00012" summary="better name for secrets variable -typo fix">
+      <created>1555258137417</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1555258137417</updated>
+    </task>
+    <task id="LOCAL-00013" summary="change in violations?">
+      <created>1555268726827</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1555268726827</updated>
+    </task>
+    <task id="LOCAL-00014" summary="pylint import">
+      <created>1555270433648</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1555270433648</updated>
+    </task>
+    <task id="LOCAL-00015" summary="pylint 'crashes' so removed">
+      <created>1555336563290</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1555336563290</updated>
+    </task>
+    <task id="LOCAL-00016" summary="test on everything">
+      <created>1555340673006</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1555340673006</updated>
+    </task>
+    <task id="LOCAL-00017" summary="only one test, apparently unit tests can make the build unstable">
+      <created>1555341146042</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1555341146042</updated>
+    </task>
+    <task id="LOCAL-00018" summary="bugsnag + django_jenkins integration fix + browserstack groundwork&#10;Oh the irony...">
+      <created>1557069278903</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1557069278903</updated>
+    </task>
+    <task id="LOCAL-00019" summary="added requirement">
+      <created>1557069571660</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1557069571660</updated>
+    </task>
+    <task id="LOCAL-00020" summary="coverage needed to be updated, hope it didn't break the rest, if only we had a testing platform for this kind of stuff...">
+      <created>1557332852818</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1557332852818</updated>
+    </task>
+    <task id="LOCAL-00021" summary="updated runtest for jenkins">
+      <created>1557332914545</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1557332914545</updated>
+    </task>
+    <task id="LOCAL-00022" summary="test everything">
+      <created>1557489098725</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1557489098725</updated>
+    </task>
+    <task id="LOCAL-00023" summary="commented failed tests">
+      <created>1557491755166</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1557491755166</updated>
+    </task>
+    <task id="LOCAL-00024" summary="browserstack parallel works">
+      <created>1557573327137</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1557573327137</updated>
+    </task>
+    <task id="LOCAL-00025" summary="runBrowserstack added">
+      <created>1557573763412</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1557573763412</updated>
+    </task>
+    <task id="LOCAL-00026" summary="runBrowserstack activate local virtual environment, change this to download the requirements.txt later!">
+      <created>1557573897838</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1557573897838</updated>
+    </task>
+    <task id="LOCAL-00027" summary="fix error?">
+      <created>1557578636755</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1557578636756</updated>
+    </task>
+    <task id="LOCAL-00028" summary="error fixed, was on jenkins server itself... added the pipeline script in the repository">
+      <created>1557579020601</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1557579020601</updated>
+    </task>
+    <task id="LOCAL-00029" summary="switched browserstack to after deploy stage for later testing">
+      <created>1557579049168</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1557579049168</updated>
+    </task>
+    <task id="LOCAL-00030" summary="removed redundant git checkout">
+      <created>1557579172067</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1557579172067</updated>
+    </task>
+    <task id="LOCAL-00031" summary="no build step necessary here normally">
+      <created>1557579255084</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1557579255084</updated>
+    </task>
+    <task id="LOCAL-00032" summary="hush hush, keeping it secret">
+      <created>1557581260136</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1557581260136</updated>
+    </task>
+    <task id="LOCAL-00033" summary="selenium simple example + create clean virtual environment">
+      <created>1558166859349</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1558166859350</updated>
+    </task>
+    <task id="LOCAL-00034" summary="selenium simple example + create clean virtual environment">
+      <created>1558168260563</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1558168260563</updated>
+    </task>
+    <task id="LOCAL-00035" summary="updated requirements">
+      <created>1558168511889</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1558168511889</updated>
+    </task>
+    <task id="LOCAL-00036" summary="pipeline updated">
+      <created>1558274768097</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1558274768098</updated>
+    </task>
+    <task id="LOCAL-00037" summary="pipeline updated">
+      <created>1558275141597</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1558275141597</updated>
+    </task>
+    <task id="LOCAL-00038" summary="requirements updated">
+      <created>1558275236415</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1558275236415</updated>
+    </task>
+    <task id="LOCAL-00039" summary="necessary to activate venv again?">
+      <created>1558275325122</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1558275325122</updated>
+    </task>
+    <task id="LOCAL-00040" summary="venv is necessary to activate every new .bat script">
+      <created>1558275443179</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1558275443179</updated>
+    </task>
+    <task id="LOCAL-00041" summary="small changes for more clarity">
+      <created>1558294255640</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1558294255640</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Test__home_tests_test_models_home_ProjectTestCase_test_ordering_first_created_project_last_in_query - 2019.04.14 at 16h 52m 25s.xml">
+      <configuration name="Test: home.tests.test_models_home.ProjectTestCase.test_ordering_first_created_project_last_in_query" configurationId="DjangoTestsConfigurationType" />
+    </history-entry>
+    <history-entry file="Test__home_tests_test_models_home_ProjectTestCase - 2019.04.14 at 16h 52m 40s.xml">
+      <configuration name="Test: home.tests.test_models_home.ProjectTestCase" configurationId="DjangoTestsConfigurationType" />
+    </history-entry>
+    <history-entry file="Test__chat_tests_test_jenkins_delete_later_jenkinsunittest - 2019.04.14 at 16h 53m 11s.xml">
+      <configuration name="Test: chat.tests.test_jenkins_delete_later.jenkinsunittest" configurationId="DjangoTestsConfigurationType" />
+    </history-entry>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2286652" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Query Editor" order="3" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.329718" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32968238" />
+      <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32968238" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.36363637" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32968238" />
+      <window_info anchor="bottom" id="SFDX" order="13" />
+      <window_info anchor="bottom" id="DB Execution Console" order="14" />
+      <window_info anchor="bottom" id="Salesforce" order="15" />
+      <window_info anchor="bottom" id="Log Manager" order="16" />
+      <window_info anchor="bottom" id="Execute Anonymous" order="17" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32995737" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="pylint 'crashes' so removed" />
+    <MESSAGE value="test on everything" />
+    <MESSAGE value="only one test, apparently unit tests can make the build unstable" />
+    <MESSAGE value="bugsnag + django_jenkins integration fix + browserstack groundwork&#10;Oh the irony..." />
+    <MESSAGE value="added requirement" />
+    <MESSAGE value="coverage needed to be updated, hope it didn't break the rest, if only we had a testing platform for this kind of stuff..." />
+    <MESSAGE value="updated runtest for jenkins" />
+    <MESSAGE value="test everything" />
+    <MESSAGE value="commented failed tests" />
+    <MESSAGE value="browserstack parallel works" />
+    <MESSAGE value="runBrowserstack added" />
+    <MESSAGE value="runBrowserstack activate local virtual environment, change this to download the requirements.txt later!" />
+    <MESSAGE value="fix error?" />
+    <MESSAGE value="error fixed, was on jenkins server itself... added the pipeline script in the repository" />
+    <MESSAGE value="switched browserstack to after deploy stage for later testing" />
+    <MESSAGE value="removed redundant git checkout" />
+    <MESSAGE value="no build step necessary here normally" />
+    <MESSAGE value="hush hush, keeping it secret" />
+    <MESSAGE value="selenium simple example + create clean virtual environment" />
+    <MESSAGE value="updated requirements" />
+    <MESSAGE value="pipeline updated" />
+    <MESSAGE value="requirements updated" />
+    <MESSAGE value="necessary to activate venv again?" />
+    <MESSAGE value="venv is necessary to activate every new .bat script" />
+    <MESSAGE value="small changes for more clarity" />
+    <option name="LAST_COMMIT_MESSAGE" value="small changes for more clarity" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/reports/coverage.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home/tests/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Browserstack_tests/desperateMeasures/test.py" />
+    <entry file="file://$PROJECT_DIR$/Browserstack_tests/desperateMeasures/run_parallel_tests.py" />
+    <entry file="file://$PROJECT_DIR$/Browserstack_tests/.pytest_cache/.gitignore" />
+    <entry file="file://$PROJECT_DIR$/Browserstack_tests/browserstackTest1.xml" />
+    <entry file="file://$PROJECT_DIR$/Browserstack_tests/browserstackTest2.xml" />
+    <entry file="file://$PROJECT_DIR$/reports/junit.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="40" selection-start-column="40" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Browserstack_tests/browserstackTest3.xml" />
+    <entry file="file://$PROJECT_DIR$/Browserstack_tests/browserstackTest0.xml" />
+    <entry file="file://$PROJECT_DIR$/Browserstack_tests/reports/browserstackTest1.xml/TESTS-single.xml" />
+    <entry file="file://$PROJECT_DIR$/Browserstack_tests/reports/browserstackTest2.xml/TESTS-single.xml" />
+    <entry file="file://$PROJECT_DIR$/Browserstack_tests/reports/browserstackTest0.xml/TESTS-single.xml" />
+    <entry file="file://$PROJECT_DIR$/Browserstack_tests/reports/TESTS-single.xml" />
+    <entry file="file://$PROJECT_DIR$/chat/tests/test_jenkins_delete_later.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="46" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reports/pep8.report">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="60" selection-start-line="28" selection-start-column="60" selection-end-line="28" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reports/pyflakes.report">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="53" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.coverage">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret column="3965" selection-start-column="3965" selection-end-column="3965" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Projects/venv/Lib/site-packages/selenium/webdriver/remote/webelement.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="446" column="8" selection-start-line="446" selection-start-column="8" selection-end-line="446" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ConnectID/urls.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home/tests/test_models_chat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1224" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home/tests/test_models_home.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-115">
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home/tests/test_models_successstory.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reports/pylint.report" />
+    <entry file="file://$PROJECT_DIR$/build.bat" />
+    <entry file="file://$PROJECT_DIR$/runBrowserstack.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home/models.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home/forms.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home/templates/home/new_project.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Browserstack_tests/debug.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Jenkinsfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="44" column="12" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="2" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4216">
+          <caret line="265" column="35" selection-start-line="265" selection-start-column="35" selection-end-line="265" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runtest.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="76" selection-start-line="3" selection-start-column="76" selection-end-line="3" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home/templates/home/project.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+          <folding>
+            <element signature="e#22#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Browserstack_tests/features/steps/steps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Browserstack_tests/config/single.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="35" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Browserstack_tests/config/parallel.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="32" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Browserstack_tests/features/single.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Browserstack_tests/features/environment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="31" selection-start-line="31" selection-end-line="34" selection-end-column="67" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Browserstack_tests/selenium_example.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="56" selection-start-line="4" selection-start-column="4" selection-end-line="12" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Browserstack_tests/pavement.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Browserstack_tests/single.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Browserstack_tests/browserstack_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="553">
+          <caret line="90" selection-start-line="90" selection-end-line="90" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ConnectID/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="19" selection-start-column="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runtime.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="10" selection-start-column="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ConnectID/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1181">
+          <caret line="156" column="47" selection-start-line="156" selection-start-column="47" selection-end-line="156" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/secrets.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

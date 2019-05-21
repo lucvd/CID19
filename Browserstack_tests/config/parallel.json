@@ -1,5 +1,8 @@
 {
   "server": "hub.browserstack.com",
+  //TODO delete below before commiting
+  "user": "jeroenveltmans1",
+  "key": "BwHWqoz9bA29UXwuBGmT",
 
   "capabilities": {
     "build": "behave-browserstack",

@@ -42,11 +42,10 @@ pipeline {
             junit '**/Browserstack_tests/reports/2/*.xml'
             junit 'Browserstack_tests/reports/3/*.xml'
             recordIssues(tools: [pep8(pattern: 'reports/pep8.report')])
-            // emailext body: 'I just wanted to say... \n Thanks', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
             cobertura autoUpdateHealth: false, autoUpdateStability: false, coberturaReportFile: 'reports/coverage.xml', conditionalCoverageTargets: '70, 0, 0', failUnhealthy: false, failUnstable: false, lineCoverageTargets: '80, 0, 0', maxNumberOfBuilds: 0, methodCoverageTargets: '80, 0, 0', onlyStable: false, sourceEncoding: 'ASCII', zoomCoverageChart: false
         }
         failure {
-            emailext body: 'PipelineTest has failed omg!!!', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'EMERGENCY WII U WII U WII U WII U'
+            emailext body: 'An error needs to be fixed asap!', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'An error occured in the ConnectID pipeline'
         }
     }
 }

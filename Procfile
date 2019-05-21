@@ -1,0 +1,1 @@
+web: gunicorn CID19.wsgi --log-file -

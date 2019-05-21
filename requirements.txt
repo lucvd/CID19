@@ -28,3 +28,7 @@ coverage
 pep8
 pyflakes
 #pylint     #django_jenkins gives errors but probably run separately
+gunicorn
+dj-database-url
+whitenoise
+psycopg2

@@ -1,0 +1,71 @@
+home\forms.py:1: [E] PYFLAKES:'requests' imported but unused
+home\forms.py:3: [E] PYFLAKES:'django.forms.formset_factory' imported but unused
+home\forms.py:4: [E] PYFLAKES:'django.core.files.File' imported but unused
+home\forms.py:5: [E] PYFLAKES:'django.core.files.base.ContentFile' imported but unused
+home\forms.py:6: [E] PYFLAKES:'django.core.files.temp.NamedTemporaryFile' imported but unused
+home\forms.py:10: [E] PYFLAKES:'from ConnectID.choices import *' used; unable to detect undefined names
+home\forms.py:10: [E] PYFLAKES:'ConnectID.choices.*' imported but unused
+home\forms.py:166: [E] PYFLAKES:redefinition of unused 'File' from line 4
+home\models.py:12: [E] PYFLAKES:'from ConnectID.choices import *' used; unable to detect undefined names
+home\models.py:34: [E] PYFLAKES:'GENERAL_PROJECT_TYPES' may be undefined, or defined from star imports: [E] PYFLAKES:ConnectID.choices
+home\models.py:35: [E] PYFLAKES:'PROJECT_TYPES' may be undefined, or defined from star imports: [E] PYFLAKES:ConnectID.choices
+home\models.py:36: [E] PYFLAKES:'PROJECT_STATUS' may be undefined, or defined from star imports: [E] PYFLAKES:ConnectID.choices
+home\models.py:38: [E] PYFLAKES:'LOCATIONS' may be undefined, or defined from star imports: [E] PYFLAKES:ConnectID.choices
+home\models.py:87: [E] PYFLAKES:'TYPE_OF_USER' may be undefined, or defined from star imports: [E] PYFLAKES:ConnectID.choices
+home\social_auth_extra_functions.py:10: [E] PYFLAKES:use ==/!= to compare str, bytes, and int literals
+home\social_auth_extra_functions.py:12: [E] PYFLAKES:use ==/!= to compare str, bytes, and int literals
+home\views.py:6: [E] PYFLAKES:'django.http.HttpResponse' imported but unused
+home\views.py:9: [E] PYFLAKES:'django.db.models.Q' imported but unused
+home\views.py:18: [E] PYFLAKES:'from ConnectID.choices import *' used; unable to detect undefined names
+home\views.py:18: [E] PYFLAKES:'ConnectID.choices.*' imported but unused
+home\tests\test_models_chat.py:81: [E] PYFLAKES:local variable 'conv23' is assigned to but never used
+home\tests\__init__.py:1: [E] PYFLAKES:'from home.tests.test_models_home import *' used; unable to detect undefined names
+home\tests\__init__.py:1: [E] PYFLAKES:'home.tests.test_models_home.*' imported but unused
+home\tests\__init__.py:2: [E] PYFLAKES:'from home.tests.test_models_chat import *' used; unable to detect undefined names
+home\tests\__init__.py:2: [E] PYFLAKES:'home.tests.test_models_chat.*' imported but unused
+home\tests\__init__.py:3: [E] PYFLAKES:'from home.tests.test_models_successstory import *' used; unable to detect undefined names
+home\tests\__init__.py:3: [E] PYFLAKES:'home.tests.test_models_successstory.*' imported but unused
+..\Projects\venv\lib\site-packages\django\contrib\messages\__init__.py:1: [E] PYFLAKES:'from django.contrib.messages.api import *' used; unable to detect undefined names
+..\Projects\venv\lib\site-packages\django\contrib\messages\__init__.py:1: [E] PYFLAKES:'django.contrib.messages.api.*' imported but unused
+..\Projects\venv\lib\site-packages\django\contrib\messages\__init__.py:2: [E] PYFLAKES:'from django.contrib.messages.constants import *' used; unable to detect undefined names
+..\Projects\venv\lib\site-packages\django\contrib\messages\__init__.py:2: [E] PYFLAKES:'django.contrib.messages.constants.*' imported but unused
+..\Projects\venv\lib\site-packages\compressor\models.py:1: [E] PYFLAKES:'compressor.conf.CompressorConf' imported but unused
+..\Projects\venv\lib\site-packages\compressor\filters\__init__.py:2: [E] PYFLAKES:'compressor.filters.base.FilterBase' imported but unused
+..\Projects\venv\lib\site-packages\compressor\filters\__init__.py:2: [E] PYFLAKES:'compressor.filters.base.CallbackOutputFilter' imported but unused
+..\Projects\venv\lib\site-packages\compressor\filters\__init__.py:2: [E] PYFLAKES:'compressor.filters.base.CompilerFilter' imported but unused
+..\Projects\venv\lib\site-packages\compressor\filters\__init__.py:2: [E] PYFLAKES:'compressor.filters.base.CachedCompilerFilter' imported but unused
+..\Projects\venv\lib\site-packages\compressor\filters\__init__.py:2: [E] PYFLAKES:'compressor.filters.base.FilterError' imported but unused
+..\Projects\venv\lib\site-packages\compressor\management\commands\compress.py:6: [E] PYFLAKES:'collections.defaultdict' imported but unused
+..\Projects\venv\lib\site-packages\compressor\management\commands\compress.py:12: [E] PYFLAKES:'django.template' imported but unused
+..\Projects\venv\lib\site-packages\compressor\management\commands\compress.py:16: [E] PYFLAKES:'django.template.loader.get_template' imported but unused
+..\Projects\venv\lib\site-packages\compressor\parser\lxml.py:31: [E] PYFLAKES:local variable 'err' is assigned to but never used
+..\Projects\venv\lib\site-packages\compressor\parser\__init__.py:7: [E] PYFLAKES:'compressor.parser.base.ParserBase' imported but unused
+..\Projects\venv\lib\site-packages\compressor\parser\__init__.py:10: [E] PYFLAKES:'compressor.parser.beautifulsoup.BeautifulSoupParser' imported but unused
+..\Projects\venv\lib\site-packages\compressor\parser\__init__.py:11: [E] PYFLAKES:'compressor.parser.html5lib.Html5LibParser' imported but unused
+..\Projects\venv\lib\site-packages\rules\__init__.py:1: [E] PYFLAKES:'.rulesets.RuleSet' imported but unused
+..\Projects\venv\lib\site-packages\rules\__init__.py:1: [E] PYFLAKES:'.rulesets.add_rule' imported but unused
+..\Projects\venv\lib\site-packages\rules\__init__.py:1: [E] PYFLAKES:'.rulesets.remove_rule' imported but unused
+..\Projects\venv\lib\site-packages\rules\__init__.py:1: [E] PYFLAKES:'.rulesets.rule_exists' imported but unused
+..\Projects\venv\lib\site-packages\rules\__init__.py:1: [E] PYFLAKES:'.rulesets.test_rule' imported but unused
+..\Projects\venv\lib\site-packages\rules\__init__.py:2: [E] PYFLAKES:'.permissions.add_perm' imported but unused
+..\Projects\venv\lib\site-packages\rules\__init__.py:2: [E] PYFLAKES:'.permissions.remove_perm' imported but unused
+..\Projects\venv\lib\site-packages\rules\__init__.py:2: [E] PYFLAKES:'.permissions.perm_exists' imported but unused
+..\Projects\venv\lib\site-packages\rules\__init__.py:2: [E] PYFLAKES:'.permissions.has_perm' imported but unused
+..\Projects\venv\lib\site-packages\rules\__init__.py:3: [E] PYFLAKES:'.predicates.Predicate' imported but unused
+..\Projects\venv\lib\site-packages\rules\__init__.py:3: [E] PYFLAKES:'.predicates.predicate' imported but unused
+..\Projects\venv\lib\site-packages\rules\__init__.py:3: [E] PYFLAKES:'.predicates.always_true' imported but unused
+..\Projects\venv\lib\site-packages\rules\__init__.py:3: [E] PYFLAKES:'.predicates.always_false' imported but unused
+..\Projects\venv\lib\site-packages\rules\__init__.py:3: [E] PYFLAKES:'.predicates.always_allow' imported but unused
+..\Projects\venv\lib\site-packages\rules\__init__.py:3: [E] PYFLAKES:'.predicates.always_deny' imported but unused
+..\Projects\venv\lib\site-packages\rules\__init__.py:3: [E] PYFLAKES:'.predicates.is_authenticated' imported but unused
+..\Projects\venv\lib\site-packages\rules\__init__.py:3: [E] PYFLAKES:'.predicates.is_superuser' imported but unused
+..\Projects\venv\lib\site-packages\rules\__init__.py:3: [E] PYFLAKES:'.predicates.is_staff' imported but unused
+..\Projects\venv\lib\site-packages\rules\__init__.py:3: [E] PYFLAKES:'.predicates.is_active' imported but unused
+..\Projects\venv\lib\site-packages\rules\__init__.py:3: [E] PYFLAKES:'.predicates.is_group_member' imported but unused
+chat\models.py:27: [E] PYFLAKES:local variable 'partOther' is assigned to but never used
+chat\tests\__init__.py:1: [E] PYFLAKES:'from chat.tests.test_jenkins_delete_later import *' used; unable to detect undefined names
+chat\tests\__init__.py:1: [E] PYFLAKES:'chat.tests.test_jenkins_delete_later.*' imported but unused
+..\Projects\venv\lib\site-packages\widget_tweaks\templatetags\widget_tweaks.py:144: [E] PYFLAKES:local variable 'tag_name' is assigned to but never used
+..\Projects\venv\lib\site-packages\social_django\compat.py:10: [E] PYFLAKES:'django.core.urlresolvers.reverse' imported but unused
+..\Projects\venv\lib\site-packages\social_django\models.py:2: [E] PYFLAKES:'six' imported but unused
+..\Projects\venv\lib\site-packages\social_django\migrations\0004_auto_20160423_0400.py:4: [E] PYFLAKES:'django.db.models' imported but unused

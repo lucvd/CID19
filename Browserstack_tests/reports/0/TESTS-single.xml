@@ -1,0 +1,12 @@
+<testsuite errors="0" failures="0" hostname="GE70-2PE" name="single.Google\'s Search Functionality" skipped="0" tests="1" time="7.928028" timestamp="2019-05-20T23:45:03.963628"><testcase classname="single.Google\'s Search Functionality" name="can find search results" status="passed" time="7.928028"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: can find search results
+    When visit url "http://www.google.com/ncr" ... passed in 1.036s
+    When field with name "q" is given "BrowserStack" ... passed in 6.784s
+    Then title becomes "BrowserStack - Google Search" ... passed in 0.107s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

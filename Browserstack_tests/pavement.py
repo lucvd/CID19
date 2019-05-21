@@ -23,6 +23,15 @@ def run_behave_test(config, feature, task_id=0):
         sh('CONFIG_FILE=config/%s.json TASK_ID=%s behave features/%s.feature --junit --junit-directory reports/%s' % (config, task_id, feature, task_id))
 
 
+# TODO delete this later if not used
+def run_selenium_test(config, feature, task_id=0):
+    if platform.system() == "Windows":
+        sh('cmd /C "set CONFIG_FILE=config/%s.json && set TASK_ID=%s && behave features/%s.feature --junit --junit-directory reports/%s"' % (config, task_id, feature, task_id))
+    else:
+        sh('CONFIG_FILE=config/%s.json TASK_ID=%s behave features/%s.feature --junit --junit-directory reports/%s' % (config, task_id, feature, task_id))
+
+
+
 @task
 @consume_nargs(1)
 def run(args):

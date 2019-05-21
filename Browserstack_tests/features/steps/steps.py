@@ -16,10 +16,9 @@ def step(context, selector, value):
 def step(context, title):
     assert context.browser.title == title
 
-@then(u'page contains "{body}"')
+@then('page contains "{body}"')
 def step(context, body):
     assert body in context.browser.page_source
 
-@when('element with xpath "{path}" is clicked')
-def step(context, path):
-    elem = context.browser.find_element_by_xp
+
+

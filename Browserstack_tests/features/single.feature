@@ -1,6 +1,6 @@
-Feature: Google\'s Search Functionality
+Feature: Navigate through Connect-ID site
     Scenario: can find search results
-        When visit url "http://www.google.com/ncr"
-        When field with name "q" is given "BrowserStack"
-        Then title becomes "BrowserStack - Google Search"
+        When visit url "http://google.com"
+        When field with name "q" is given "Connect-ID"
+        Then title becomes "Connect-ID - Google Search"
 
