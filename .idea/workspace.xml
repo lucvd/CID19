@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f5ceaef-325c-45bc-a730-da38650654ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Browserstack_tests/browserstack_tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runtime.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Browserstack_tests/config/parallel.json" beforeDir="false" afterPath="$PROJECT_DIR$/Browserstack_tests/config/parallel.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Browserstack_tests/features/single.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Browserstack_tests/features/single.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Browserstack_tests/features/steps/steps.py" beforeDir="false" afterPath="$PROJECT_DIR$/Browserstack_tests/features/steps/steps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Browserstack_tests/pavement.py" beforeDir="false" afterPath="$PROJECT_DIR$/Browserstack_tests/pavement.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Browserstack_tests/selenium_example.py" beforeDir="false" afterPath="$PROJECT_DIR$/Browserstack_tests/selenium_example.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime.txt" beforeDir="false" afterPath="$PROJECT_DIR$/runtime.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -111,7 +102,7 @@
           <entry key="json" value="68" />
           <entry key="py" value="3686" />
           <entry key="sh" value="62" />
-          <entry key="txt" value="2190" />
+          <entry key="txt" value="2192" />
           <entry key="xml" value="35" />
           <entry key="yml" value="15" />
         </counts>
@@ -122,7 +113,7 @@
           <entry key="Bat" value="716" />
           <entry key="Cucumber" value="230" />
           <entry key="JSON" value="68" />
-          <entry key="PLAIN_TEXT" value="2466" />
+          <entry key="PLAIN_TEXT" value="2468" />
           <entry key="Python" value="3686" />
           <entry key="XML" value="35" />
           <entry key="YAML" value="15" />
@@ -180,7 +171,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/secrets.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
@@ -212,11 +203,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/runtime.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="10" selection-start-column="10" selection-end-column="10" />
+              <caret column="12" lean-forward="true" selection-start-column="12" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -281,9 +272,9 @@
         <option value="$PROJECT_DIR$/Browserstack_tests/single.json" />
         <option value="$PROJECT_DIR$/Browserstack_tests/browserstack_tests.py" />
         <option value="$PROJECT_DIR$/Procfile" />
-        <option value="$PROJECT_DIR$/runtime.txt" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/secrets.yml" />
+        <option value="$PROJECT_DIR$/runtime.txt" />
       </list>
     </option>
   </component>
@@ -333,7 +324,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../CID19-master" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -771,7 +762,7 @@
     <frame x="953" y="0" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2286652" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2286652" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Query Editor" order="3" />
@@ -786,7 +777,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32968238" />
       <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32968238" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.36363637" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.36363637" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32968238" />
       <window_info anchor="bottom" id="SFDX" order="13" />
       <window_info anchor="bottom" id="DB Execution Console" order="14" />
@@ -1065,13 +1056,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/runtime.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="10" selection-start-column="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ConnectID/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1181">
@@ -1090,6 +1074,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runtime.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" lean-forward="true" selection-start-column="12" selection-end-column="12" />
         </state>
       </provider>
     </entry>
