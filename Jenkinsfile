@@ -37,10 +37,6 @@ pipeline {
     post {
         always {
             junit '**/reports/*.xml'
-            junit testDataPublishers: [[$class: 'AutomateTestDataPublisher']], testResults: 'Browserstack_tests/reports/0/*.xml'
-            junit 'Browserstack_tests/reports/1/*.xml'
-            junit '**/Browserstack_tests/reports/2/*.xml'
-            junit 'Browserstack_tests/reports/3/*.xml'
             recordIssues(tools: [pyLint(pattern: 'reports/pylint.report'), pep8(pattern: 'reports/pep8.report')])
             cobertura autoUpdateHealth: false, autoUpdateStability: false, coberturaReportFile: 'reports/coverage.xml', conditionalCoverageTargets: '70, 0, 0', failUnhealthy: false, failUnstable: false, lineCoverageTargets: '80, 0, 0', maxNumberOfBuilds: 0, methodCoverageTargets: '80, 0, 0', onlyStable: false, sourceEncoding: 'ASCII', zoomCoverageChart: false
         }
