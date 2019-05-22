@@ -1,1 +1,1 @@
-web: gunicorn CID19.wsgi --log-file -
+web: gunicorn connect-id-test.wsgi --log-file -
