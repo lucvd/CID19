@@ -1,7 +1,9 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
-from queue import  Queue
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as expected
+from queue import Queue
 from threading import Thread
 import requests
 import os, json
@@ -69,6 +71,8 @@ def run_test(q):
             assert "Connect-ID" in driver.title
             driver.find_element_by_xpath \
                 ("//*[@id=\"page-top\"]/header/div/div/a").click()
+
+            WebDriverWait(driver, 10).until(expected.title_is('LinkedIn Login, LinkedIn Sign in | LinkedIn'))
             driver.find_element_by_id("username").send_keys("jeroen.jerry@hotmail.com")
             elem = driver.find_element_by_id("password")
             elem.send_keys("linkedintest!")
@@ -76,7 +80,7 @@ def run_test(q):
             assert "No results found." not in driver.page_source
         except AssertionError as e:
             requests.put('https://' + BROWSERSTACK_USERNAME + ':' + BROWSERSTACK_ACCESS_KEY + '@api.browserstack.com/automate/sessions/'
-                         + driver.session_id + '.json', data={"status": "failed", "reason": "didn't pass assertion test"})
+                         + driver.session_id + '.json', data={"status": "failed", "reason": "did not pass an assertion test"})
         finally:    # Teardown
             driver.quit()
             q.task_done()

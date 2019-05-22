@@ -27,8 +27,6 @@ browserstack-local
 coverage
 pep8
 pyflakes
-pylint     #django_jenkins gives errors but probably run separately
+pylint
 gunicorn
-dj-database-url
-whitenoise
-psycopg2
+django-heroku
