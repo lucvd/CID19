@@ -1,1 +1,1 @@
-web: gunicorn connect-id-test.wsgi --log-file -
+web: gunicorn ConnectID.wsgi --log-file -
