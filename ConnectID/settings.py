@@ -91,15 +91,11 @@ COMPRESS_PRECOMPILERS = (
 # django social auth
 SOCIAL_AUTH_LINKEDIN_OAUTH2_SCOPE = ['r_basicprofile', 'r_emailaddress']
 SOCIAL_AUTH_LINKEDIN_OAUTH2_FIELD_SELECTORS = ['email-address', 'headline', 'public-profile-url', 'picture-urls::(original)', 'picture-url']
-SOCIAL_AUTH_LINKEDIN_OAUTH2_EXTRA_DATA = [('id', 'id'),
-                                          ('firstName', 'first_name'),
-                                          ('lastName', 'last_name'),
-                                          ('emailAddress', 'email_address'),
-                                          ('pictureOriginal', 'picture-urls::(original)'), # When these start working, you can use this in the edit_profile_picture.html
-                                          ('profileURL', 'public-profile-url'),
-                                          ('picture-url', 'picture-url'),
-                                          ('headline', 'headline'),
-                                          ]
+# django social auth
+SOCIAL_AUTH_LINKEDIN_OAUTH2_SCOPE = [
+     'r_emailaddress', 'r_basicprofile', 'r_liteprofile']
+SOCIAL_AUTH_LINKEDIN_OAUTH2_FIELD_SELECTORS = [
+     'emailAddress', 'profilePicture(displayImage~:playableStreams)']
 SOCIAL_AUTH_USERNAME_IS_FULL_EMAIL = True
 
 # Notice 'associate_by_email' is enabled (this is not by default). To make sure no new user is created when the linkedin app is changed for example
