@@ -3,6 +3,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as expected
+from selenium.webdriver.common.by import By
 from queue import Queue
 from threading import Thread
 import requests
@@ -56,6 +57,7 @@ num_threads = 10
 
 def run_test(q):
     while q.empty() is False:
+        tests_successful = False
         try:
             # Setup
             environment = q.get()
@@ -77,11 +79,59 @@ def run_test(q):
             elem = driver.find_element_by_id("password")
             elem.send_keys("linkedintest!")
             elem.submit()
-            assert "No results found." not in driver.page_source
-        except AssertionError as e:
-            requests.put('https://' + BROWSERSTACK_USERNAME + ':' + BROWSERSTACK_ACCESS_KEY + '@api.browserstack.com/automate/sessions/'
-                         + driver.session_id + '.json', data={"status": "failed", "reason": "did not pass an assertion test"})
+            WebDriverWait(driver, 10).until(expected.title_is('Connect-ID'))
+            assert "Connect-ID" in driver.title
+
+            # navigate through the page and see if things work, mac already fails with finding the css selector...
+            driver.find_element_by_css_selector("body > div:nth-child(3) > div > div.col-lg-3.hidden-sm.hidden-md > div > div > div > div > h5 > a").click()
+            #driver.find_element_by_xpath("/html/body/div[2]/div/div[1]/div/div/div/div/h5/a").click()
+            assert "Create a new project" in driver.page_source
+
+            driver.find_element_by_css_selector("body > div:nth-child(3) > div > form > button").click()
+            assert "This field is required" in driver.page_source
+
+            navbar_element = driver.find_element_by_css_selector("#navbarSupportedContent > ul > li:nth-child(2) > a")
+            if not navbar_element.is_displayed():
+                driver.find_element_by_css_selector("body > nav > button > span").click()
+            navbar_element.click()
+            assert "jeroentest veltmans" in driver.page_source      #take name of the logged in test user
+
+            navbar_element = driver.find_element_by_css_selector("#navbarSupportedContent > ul > li:nth-child(3) > a")
+            if not navbar_element.is_displayed():
+                driver.find_element_by_css_selector("body > nav > button > span").click()
+            navbar_element.click()
+            #could send test message and see if this one is shown or not
+
+            navbar_element = driver.find_element_by_id("navbarDropdown")
+            if not navbar_element.is_displayed():
+                driver.find_element_by_css_selector("body > nav > button > span").click()
+            navbar_element.click()
+            driver.find_element_by_css_selector("#navbarSupportedContent > ul > li.nav-item.dropdown.show > div > a:nth-child(3)").click()
+            assert "Create a new project" in driver.page_source
+
+            '''   
+            navbar_element = driver.find_element_by_id("navbarDropdown")
+            if not navbar_element.is_displayed():
+                driver.find_element_by_css_selector("body > nav > button > span").click()
+            navbar_element.click()
+
+            second_element = driver.find_element_by_css_selector("#navbarSupportedContent > ul > li.nav-item.dropdown.show > div > a:nth-child(1)")
+            
+            assert "jeroentest veltmans" in driver.page_source
+
+            driver.find_element_by_css_selector("body > div:nth-child(3) > div.jumbotron > div > div > div.col-lg-7.col-xl-8 > h1 > span > a").click()
+            assert "Headline:" in driver.page_source
+            '''
+
+            tests_successful = True
+
+        except (AssertionError) as e:
+            print(e)
         finally:    # Teardown
+            if not tests_successful:
+                requests.put('https://' + BROWSERSTACK_USERNAME + ':' + BROWSERSTACK_ACCESS_KEY + '@api.browserstack.com/automate/sessions/'
+                         + driver.session_id + '.json', data={"status": "failed", "reason": "did not pass an assertion test"})
+
             driver.quit()
             q.task_done()
 
