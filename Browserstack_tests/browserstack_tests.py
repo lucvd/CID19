@@ -66,7 +66,7 @@ def run_test(q):
                 if key not in environment:
                     environment[key] = CONFIG["capabilities"][key]
             driver = webdriver.Remote(desired_capabilities=environment,
-                                      command_executor="http://%s:%s@%s/wd/hub" % (BROWSERSTACK_USERNAME, BROWSERSTACK_ACCESS_KEY, CONFIG['server']))
+                                      command_executor="http://%s:%s@%s/wd/hub" % (BROWSERSTACK_USERNAME, BROWSERSTACK_ACCESS_KEY, 'hub.browserstack.com'))
 
             #Start actually testing the code
             driver.get("http://connectid.pythonanywhere.com/")
