@@ -23,12 +23,14 @@ pipeline {
         }
         stage('Test Browserstack') {
             steps {
-                browserstack('8634eb5c-bcf0-418d-a0e2-ecb84b185250') {
-                    script {
-                        if(isUnix()){
-                            sh label: '', script: 'runBrowserstack.sh'
-                        }else{
-                            bat label: '', script: 'runBrowserstack.bat'
+                withCredentials([file(credentialsId: 'browserstack_config', variable: 'CONFIG_FILE')]) {
+                    browserstack('8634eb5c-bcf0-418d-a0e2-ecb84b185250') {
+                        script {
+                            if(isUnix()){
+                                sh label: '', script: 'runBrowserstack.sh'
+                            }else{
+                                bat label: '', script: 'runBrowserstack.bat'
+                            }
                         }
                     }
                 }
