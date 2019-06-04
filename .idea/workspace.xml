@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1f5ceaef-325c-45bc-a730-da38650654ce" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Browserstack_tests/browserstack_tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Browserstack_tests/browserstack_tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/developdb.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/developdb.sqlite3" afterDir="false" />
-    </list>
+    <list default="true" id="1f5ceaef-325c-45bc-a730-da38650654ce" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +34,7 @@
     <session id="-1499286785">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="53" />
+          <entry key="project.closed" value="54" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.13" value="1" />
@@ -108,7 +104,7 @@
           <entry key="py" value="5168" />
           <entry key="report" value="5" />
           <entry key="sh" value="62" />
-          <entry key="txt" value="2455" />
+          <entry key="txt" value="2485" />
           <entry key="xml" value="35" />
           <entry key="yml" value="69" />
         </counts>
@@ -120,7 +116,7 @@
           <entry key="Cucumber" value="230" />
           <entry key="HTML" value="32" />
           <entry key="JSON" value="68" />
-          <entry key="PLAIN_TEXT" value="2765" />
+          <entry key="PLAIN_TEXT" value="2795" />
           <entry key="Python" value="5168" />
           <entry key="XML" value="35" />
           <entry key="YAML" value="69" />
@@ -558,13 +554,6 @@
       <option name="presentableId" value="Default" />
       <updated>1554891434831</updated>
     </task>
-    <task id="LOCAL-00008" summary="multiline .bat file by putting call in front">
-      <created>1555255640644</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1555255640644</updated>
-    </task>
     <task id="LOCAL-00009" summary="don't show the commands on execute">
       <created>1555255701431</created>
       <option name="number" value="00009" />
@@ -901,7 +890,14 @@
       <option name="project" value="LOCAL" />
       <updated>1558788834780</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="browserstack fix for jenkins">
+      <created>1559585329504</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1559585329505</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -955,7 +951,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="runBrowserstack added" />
     <MESSAGE value="runBrowserstack activate local virtual environment, change this to download the requirements.txt later!" />
     <MESSAGE value="fix error?" />
     <MESSAGE value="error fixed, was on jenkins server itself... added the pipeline script in the repository" />
@@ -980,7 +975,8 @@
     <MESSAGE value="connect-id" />
     <MESSAGE value="updated rundeploy" />
     <MESSAGE value="changed to new linkedin authentication" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed to new linkedin authentication" />
+    <MESSAGE value="browserstack fix for jenkins" />
+    <option name="LAST_COMMIT_MESSAGE" value="browserstack fix for jenkins" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/reports/junit.xml" />
