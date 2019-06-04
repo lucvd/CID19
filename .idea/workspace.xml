@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1f5ceaef-325c-45bc-a730-da38650654ce" name="Default Changelist" comment="" />
+    <list default="true" id="1f5ceaef-325c-45bc-a730-da38650654ce" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +43,7 @@
           <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.22" value="6" />
           <entry key="project.open.time.23" value="10" />
-          <entry key="project.open.time.24" value="8" />
+          <entry key="project.open.time.24" value="9" />
           <entry key="project.open.time.25" value="2" />
           <entry key="project.open.time.26" value="2" />
           <entry key="project.open.time.27" value="2" />
@@ -53,12 +55,12 @@
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="3" />
-          <entry key="project.opened" value="54" />
+          <entry key="project.opened" value="55" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="Jenkinsfile" value="6" />
+          <entry key="Jenkinsfile" value="7" />
           <entry key="Procfile" value="3" />
           <entry key="bat" value="16" />
           <entry key="browserstack" value="1" />
@@ -70,7 +72,7 @@
           <entry key="json" value="15" />
           <entry key="log" value="2" />
           <entry key="md" value="1" />
-          <entry key="py" value="119" />
+          <entry key="py" value="120" />
           <entry key="report" value="11" />
           <entry key="sh" value="1" />
           <entry key="txt" value="12" />
@@ -86,21 +88,21 @@
           <entry key="Image" value="1" />
           <entry key="JSON" value="15" />
           <entry key="Markdown" value="1" />
-          <entry key="PLAIN_TEXT" value="42" />
-          <entry key="Python" value="120" />
+          <entry key="PLAIN_TEXT" value="43" />
+          <entry key="Python" value="121" />
           <entry key="XML" value="22" />
           <entry key="YAML" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Jenkinsfile" value="164" />
+          <entry key="Jenkinsfile" value="203" />
           <entry key="Procfile" value="78" />
           <entry key="bat" value="1046" />
           <entry key="dummy" value="12" />
           <entry key="feature" value="230" />
           <entry key="html" value="32" />
-          <entry key="json" value="68" />
+          <entry key="json" value="71" />
           <entry key="py" value="5168" />
           <entry key="report" value="5" />
           <entry key="sh" value="62" />
@@ -115,8 +117,8 @@
           <entry key="Bat" value="997" />
           <entry key="Cucumber" value="230" />
           <entry key="HTML" value="32" />
-          <entry key="JSON" value="68" />
-          <entry key="PLAIN_TEXT" value="2795" />
+          <entry key="JSON" value="71" />
+          <entry key="PLAIN_TEXT" value="2834" />
           <entry key="Python" value="5168" />
           <entry key="XML" value="35" />
           <entry key="YAML" value="69" />
@@ -133,20 +135,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/runBrowserstack.bat">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="3" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Browserstack_tests/browserstack_tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1156">
-              <caret line="68" column="155" lean-forward="true" selection-start-line="68" selection-start-column="155" selection-end-line="68" selection-end-column="155" />
+            <state relative-caret-position="-1487">
+              <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -155,19 +148,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Browserstack_tests/single.json">
+        <entry file="file://$PROJECT_DIR$/Browserstack_tests/selenium_example.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="33" lean-forward="true" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="33" />
+            <state>
+              <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/secrets.yml">
+        <entry file="file://$PROJECT_DIR$/Jenkinsfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+            <state relative-caret-position="425">
+              <caret line="25" column="98" selection-start-line="25" selection-start-column="98" selection-end-line="25" selection-end-column="98" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Browserstack_tests/single.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -294,15 +296,15 @@
         <option value="$PROJECT_DIR$/reports/pylint.report" />
         <option value="$PROJECT_DIR$/runBrowserstack.bat" />
         <option value="$PROJECT_DIR$/Browserstack_tests/pavement.py" />
-        <option value="$PROJECT_DIR$/Browserstack_tests/single.json" />
         <option value="$PROJECT_DIR$/Procfile" />
-        <option value="$PROJECT_DIR$/Jenkinsfile" />
         <option value="$PROJECT_DIR$/runDeploy.bat" />
         <option value="$PROJECT_DIR$/ConnectID/settings.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/home/templates/home/landing.html" />
         <option value="$PROJECT_DIR$/secrets.yml" />
         <option value="$PROJECT_DIR$/Browserstack_tests/browserstack_tests.py" />
+        <option value="$PROJECT_DIR$/Browserstack_tests/single.json" />
+        <option value="$PROJECT_DIR$/Jenkinsfile" />
       </list>
     </option>
   </component>
@@ -553,20 +555,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1554891434831</updated>
-    </task>
-    <task id="LOCAL-00009" summary="don't show the commands on execute">
-      <created>1555255701431</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1555255701431</updated>
-    </task>
-    <task id="LOCAL-00010" summary="secrets.yml copied to jenkins but not accessible by anyone who shouldn't see it">
-      <created>1555257282999</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1555257283000</updated>
     </task>
     <task id="LOCAL-00011" summary="better name for secrets variable">
       <created>1555258090518</created>
@@ -897,7 +885,21 @@
       <option name="project" value="LOCAL" />
       <updated>1559585329505</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="browserstack fix for jenkins">
+      <created>1559645386617</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1559645386618</updated>
+    </task>
+    <task id="LOCAL-00059" summary="browserstack fix for jenkins">
+      <created>1559646055346</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1559646055347</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -915,7 +917,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12153518" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12260128" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Query Editor" order="3" />
@@ -1128,13 +1130,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Jenkinsfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="54" selection-start-line="20" selection-start-column="54" selection-end-line="20" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -1146,13 +1141,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="35" column="102" selection-start-line="35" selection-start-column="102" selection-end-line="35" selection-end-column="102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Browserstack_tests/selenium_example.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -1183,6 +1171,9 @@
           <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mediaRootDEBUG_DEVELOP/profilepictures/user_103.jpg">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/runtest.bat">
       <provider selected="true" editor-type-id="text-editor">
@@ -1226,20 +1217,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mediaRootDEBUG_DEVELOP/profilepictures/user_103.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Browserstack_tests/single.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="33" lean-forward="true" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="33" />
+        <state relative-caret-position="153">
+          <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Jenkinsfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="98" selection-start-line="25" selection-start-column="98" selection-end-line="25" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Browserstack_tests/selenium_example.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Browserstack_tests/browserstack_tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="68" column="155" lean-forward="true" selection-start-line="68" selection-start-column="155" selection-end-line="68" selection-end-column="155" />
+        <state relative-caret-position="-1487">
+          <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
