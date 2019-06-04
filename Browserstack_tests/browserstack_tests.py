@@ -83,8 +83,8 @@ def run_test(q):
             assert "Connect-ID" in driver.title
 
             # navigate through the page and see if things work, mac already fails with finding the css selector...
-            driver.find_element_by_css_selector("body > div:nth-child(3) > div > div.col-lg-3.hidden-sm.hidden-md > div > div > div > div > h5 > a").click()
-            #driver.find_element_by_xpath("/html/body/div[2]/div/div[1]/div/div/div/div/h5/a").click()
+            #driver.find_element_by_css_selector("body > div:nth-child(3) > div > div.col-lg-3.hidden-sm.hidden-md > div > div > div > div > h5 > a").click()
+            driver.find_element_by_xpath("/html/body/div[2]/div/div[1]/div/div/div/div/h5/a").click()
             assert "Create a new project" in driver.page_source
 
             driver.find_element_by_css_selector("body > div:nth-child(3) > div > form > button").click()

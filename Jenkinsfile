@@ -17,7 +17,6 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
                 bat label: '', script: 'runDeploy.bat'
             }
         }
