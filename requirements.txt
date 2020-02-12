@@ -1,4 +1,4 @@
-django==2.2
+django==2.2.10
 pyyaml==3.12
 pillow==4.3.0
 django_compressor==2.2
