@@ -1,5 +1,5 @@
 django==2.2
-pyyaml==3.12
+pyyaml==5.4
 pillow==4.3.0
 django_compressor==2.2
 django-libsass==0.7
